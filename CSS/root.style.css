@@ -1,0 +1,15 @@
+:root {
+  font-size: 9px;
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 5px;
+  }
+}

@@ -1,0 +1,58 @@
+body {
+    background-color: #f2f1eb;
+    margin: 0;
+  }
+
+  #NavBar {
+    border-radius: 1rem;
+    background: #b2a59b;
+    margin: auto;
+    width: 80%;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: 10rem 10rem 15rem;
+    gap: 4rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    text-align: center;
+    padding-inline: 5rem;
+    font-size: 3rem;
+    transition: 500ms;
+  }
+
+  :where(#Home, #AboutMe) {
+    background: aliceblue;
+    border-radius: 1rem;
+    transition: 300ms;
+  }
+
+  :where(#Home, #AboutMe):hover {
+    background: #7d0a0a;
+    border-radius: 5rem;
+    color: aliceblue;
+  }
+
+  #NavBar:has(.Logo) #Long {
+    display: none;
+    transition: 300ms;
+  }
+  #NavBar:has(.Logo) #Sort {
+    transition: 300ms;
+  }
+
+  #NavBar:has(.Logo:hover) {
+    grid-template-columns: 20rem 10rem 15rem;
+  }
+  #NavBar:has(.Logo:hover) #Sort {
+    display: none;
+  }
+  #NavBar:has(.Logo:hover) #Long {
+    display: contents;
+  }
+
+  #Content {
+    background-color: #eef5ff;
+    border-radius: 3rem;
+    margin: auto;
+    width: 80%;
+  }
