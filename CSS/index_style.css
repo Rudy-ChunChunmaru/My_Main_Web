@@ -3,7 +3,16 @@ body {
   margin: 0;
 }
 
+/* ------------------------------------------------ nav bar ------------------------------------------------ */
+
 #NavBar {
+  position: fixed;
+  align-items: center ;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+
+  left: 5%;
   border-radius: 1rem;
   background: #b2a59b;
   margin: auto;
@@ -20,6 +29,7 @@ body {
 }
 
 :where(#Home, #AboutMe) {
+  position: relative;
   background: aliceblue;
   border-radius: 1rem;
   transition: 300ms;
@@ -49,9 +59,33 @@ body {
   display: contents;
 }
 
+
+
+/* ------------------------------------------------ Content ------------------------------------------------ */
+
 #Content {
+  position: relative;
+  top: 5rem;
   background-color: #eef5ff;
   border-radius: 3rem;
   margin: auto;
   width: 80%;
+}
+
+/* ------------------------------------------------ Footer ------------------------------------------------ */
+
+#Footer{
+  position: fixed;
+  width: 80%;
+  height: 10%;
+  left: 5%;
+  top: 95%;
+  border-radius: 1rem;
+  padding-inline: 5rem;
+  background-color: #B6C4B6;
+  transition: 300ms;
+}
+
+#Footer:hover{
+  top: 90%;
 }
