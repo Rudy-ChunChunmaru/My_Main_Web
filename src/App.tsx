@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className="app backgroundImage-">
-      <div></div>
+    <div className="app">
+      <div>test</div>
     </div>
   );
 }
