@@ -1,5 +1,5 @@
 import Navbar from "@/scenes/navbar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TypeSelectedPage } from "@/shared/types";
 
 function App() {

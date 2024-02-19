@@ -1,5 +1,10 @@
 import { TypeSelectedPage } from "@/shared/types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import {
+  HomeIcon,
+  UserCircleIcon,
+  DocumentTextIcon,
+} from "@heroicons/react/24/solid";
 
 type Props = {
   page: string;
@@ -14,11 +19,38 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
 
   return (
     <AnchorLink
-      className={`text-black`}
+      className={`  ${selectedPage === lowerCasePage ? "text-gray-400" : ""}
+      text-black  transition duration-500 hover:text-gray-600`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
-      {page}
+      <div className="flex">
+        {page == "Home" && (
+          <HomeIcon
+            className={`mr-5 mt-1 h-6 w-6  ${
+              selectedPage === lowerCasePage ? "text-gray-400" : ""
+            }
+          text-black  transition duration-500 hover:text-gray-600`}
+          />
+        )}
+        {page == "Profile" && (
+          <UserCircleIcon
+            className={`mr-5 mt-1 h-6 w-6  ${
+              selectedPage === lowerCasePage ? "text-gray-400" : ""
+            }
+          text-black  transition duration-500 hover:text-gray-600`}
+          />
+        )}
+        {page == "Portofolio" && (
+          <DocumentTextIcon
+            className={`mr-5 mt-1 h-6 w-6  ${
+              selectedPage === lowerCasePage ? "text-gray-400" : ""
+            }
+          text-black  transition duration-500 hover:text-gray-600`}
+          />
+        )}
+        {<a>{page}</a>}
+      </div>
     </AnchorLink>
   );
 };

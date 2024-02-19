@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  HomeModernIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { TypeSelectedPage } from "@/shared/types";
 import Link from "./link";
@@ -16,8 +12,6 @@ type Props = {
 const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
   const [isMeanuToggled, setIsMenuToggled] = useState<boolean>(false);
   const flexBetween = "flex item-center justify-between";
-
-  console.log(isMeanuToggled);
 
   return (
     <nav>
