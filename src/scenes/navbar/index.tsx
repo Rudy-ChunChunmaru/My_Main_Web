@@ -11,15 +11,13 @@ type Props = {
 
 const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
   const [isMeanuToggled, setIsMenuToggled] = useState<boolean>(false);
-  const flexBetween = "flex item-center justify-between";
 
   return (
     <nav>
-      <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
-        <div className={`${flexBetween} mx-auto w-11/12`}>
-          <div className=""></div>
+      <div className="fixed top-0 z-30 h-screen w-full">
+        <div className="mx-auto flex h-screen justify-end">
           <button
-            className="flex rounded-xl bg-white px-2"
+            className="items-center bg-white px-2 transition duration-500 hover:bg-slate-300"
             onClick={() => setIsMenuToggled(!isMeanuToggled)}
           >
             <Bars3Icon className="h-6 w-6 text-black" />

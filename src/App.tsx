@@ -12,19 +12,7 @@ function App() {
     <div>
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
-      <Home selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-
-      <div id="home" className="my-96">
-        home
-      </div>
-
-      <div id="profile" className="my-96">
-        profile
-      </div>
-
-      <div id="portofolio" className="my-96">
-        portofolio
-      </div>
+      <Home selectedPage={selectedPage} />
     </div>
   );
 }
