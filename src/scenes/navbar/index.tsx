@@ -19,7 +19,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
         <div className={`${flexBetween} mx-auto w-11/12`}>
           <div className=""></div>
           <button
-            className="rounded-xl bg-white px-2"
+            className="flex rounded-xl bg-white px-2"
             onClick={() => setIsMenuToggled(!isMeanuToggled)}
           >
             <Bars3Icon className="h-6 w-6 text-black" />
