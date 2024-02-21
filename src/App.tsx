@@ -12,7 +12,7 @@ function App() {
     <div>
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
-      <Home selectedPage={selectedPage} />
+      <Home selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
     </div>
   );
 }

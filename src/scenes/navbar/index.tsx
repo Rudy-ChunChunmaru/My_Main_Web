@@ -17,10 +17,10 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
       <div className="fixed top-0 z-30 h-screen w-full">
         <div className="mx-auto flex h-screen justify-end">
           <button
-            className="items-center bg-white px-2 transition duration-500 hover:bg-slate-300"
+            className="group items-center bg-white px-2 transition duration-500 hover:bg-slate-300"
             onClick={() => setIsMenuToggled(!isMeanuToggled)}
           >
-            <Bars3Icon className="h-6 w-6 text-black" />
+            <Bars3Icon className="h-6 w-6 text-black group-hover:mx-4" />
           </button>
         </div>
       </div>
@@ -34,7 +34,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7 }}
           variants={{
-            hidden: { opacity: 0, x: 150 },
+            hidden: { opacity: 0.75, x: 150 },
             visible: { opacity: 1, x: 0 },
           }}
         >
