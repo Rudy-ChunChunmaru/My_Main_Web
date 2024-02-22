@@ -1,13 +1,15 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-const wordarray: Array<string> = "Programer Gamer".split(" ");
+// const wordarray: Array<string> = "Programer Gamer".split(" ");
 
 const Word = () => {
-  const [wordstring, setwordstring] = useState("");
+  //   const [wordstring, setwordstring] = useState("");
 
-  wordarray.map((word: string) => {});
+  //   wordarray.map((word: string) => {});
 
-  return <a className="text-center font-Protest_Riot text-3xl">{wordstring}</a>;
+  return (
+    <a className="text-center font-Protest_Riot text-3xl">{`wordstring`}</a>
+  );
 };
 
 export default Word;
