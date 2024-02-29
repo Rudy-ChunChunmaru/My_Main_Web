@@ -1,14 +1,29 @@
-// import { useState } from "react";
-
-// const wordarray: Array<string> = "Programer Gamer".split(" ");
+import { useState, useEffect } from "react";
 
 const Word = () => {
-  //   const [wordstring, setwordstring] = useState("");
+  const wordarray: Array<string> = [
+    "Programer",
+    "Gamer",
+    "Electrical Engineering",
+    "Web Developer Back End",
+    "Web Developer Fornt End",
+  ];
 
-  //   wordarray.map((word: string) => {});
+  let numword = 0;
+  const [wordstring, setwordstring] = useState(wordarray[numword]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      numword++;
+      if (numword >= wordarray.length) numword = 0;
+      setwordstring(wordarray[numword]);
+    }, 7000);
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <a className="text-center font-Protest_Riot text-3xl">{`wordstring`}</a>
+    <span className="text-center font-Protest_Riot text-3xl">{wordstring}</span>
   );
 };
 
