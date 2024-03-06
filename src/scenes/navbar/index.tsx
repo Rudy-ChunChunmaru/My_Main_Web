@@ -17,10 +17,10 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
       <div className="fixed top-0 z-30 h-screen w-full">
         <div className="mx-auto flex h-screen justify-end">
           <button
-            className="group items-center bg-white px-2 transition duration-500 hover:bg-slate-300"
+            className="group items-center bg-white transition duration-500  hover:bg-slate-300 sm:px-1 md:px-2"
             onClick={() => setIsMenuToggled(!isMeanuToggled)}
           >
-            <Bars3Icon className="h-6 w-6 text-black group-hover:mx-4" />
+            <Bars3Icon className="h-6 w-6 text-black group-hover:sm:mx-2  group-hover:md:mx-4" />
           </button>
         </div>
       </div>

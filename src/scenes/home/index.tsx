@@ -1,6 +1,7 @@
 import { TypeSelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Word from "./word";
+import Profile from "@/assets/profile.png";
 
 type Props = {
   setSelectedPage: (value: TypeSelectedPage) => void;
@@ -10,11 +11,18 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <div className="py-32" id="home">
       <motion.section
-        className="z-10 h-40 w-full"
+        className="z-10 w-full md:h-40"
         onViewportEnter={() => setSelectedPage(TypeSelectedPage.Home)}
       >
-        <div className="mx-auto h-full w-1/3">
-          <div className="flex h-full flex-col justify-end gap-2">
+        <div className="mx-auto flex h-full w-10/12 gap-1">
+          <div className="relative w-5/12">
+            <img
+              className="mx-auto w-52"
+              alt="foto profile"
+              src={Profile}
+            ></img>
+          </div>
+          <div className="flex h-full w-6/12 flex-col gap-2">
             <motion.div
               className="text-center font-Protest_Revolution text-6xl"
               initial="hidden"

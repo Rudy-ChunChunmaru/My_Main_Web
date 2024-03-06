@@ -11,6 +11,9 @@ module.exports = {
         Protest_Riot: ["Protest Riot", "sans-serif"],
         Montserrat: ["Montserrat", "sans-serif"],
       },
+      content: {
+        profile: "url('./assets/profile.jpg')",
+      },
     },
     screens: {
       xs: "480px",
