@@ -1,6 +1,6 @@
 import { TypeSelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import Word from "./word";
+import Word_intro from "./word_intro";
 import Profile from "@/assets/profile.png";
 
 type Props = {
@@ -34,7 +34,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <h1>I am RUDY</h1>
+              <h1>I AM RUDY</h1>
             </motion.div>
             <motion.div
               className="text-center font-Protest_Riot text-3xl"
@@ -47,9 +47,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <h2>
-                I am a <Word />
-              </h2>
+              <Word_intro />
             </motion.div>
             <motion.div
               className=" bg-gray-400 text-center"
