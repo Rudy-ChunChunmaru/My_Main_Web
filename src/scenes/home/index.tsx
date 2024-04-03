@@ -14,15 +14,15 @@ const Home = ({ setSelectedPage }: Props) => {
         className="z-10 w-full md:h-40"
         onViewportEnter={() => setSelectedPage(TypeSelectedPage.Home)}
       >
-        <div className="mx-auto flex h-full w-10/12 gap-1">
-          <div className="relative w-5/12">
+        <div className="mx-auto flex h-full w-10/12 flex-col gap-1 sm:flex-row">
+          <div className="relative top-10 z-0 w-full sm:top-0 sm:w-6/12">
             <img
-              className="mx-auto w-52"
+              className="mx-auto w-44"
               alt="foto profile"
               src={Profile}
             ></img>
           </div>
-          <div className="flex h-full w-6/12 flex-col gap-2">
+          <div className="z-10 flex h-full w-full flex-col gap-2 sm:w-5/12">
             <motion.div
               className="text-center font-Protest_Revolution text-6xl"
               initial="hidden"
