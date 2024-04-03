@@ -14,7 +14,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
   return (
     <nav>
-      <div className="fixed top-0 z-30 h-screen w-full">
+      <div className="z-100 fixed top-0 h-screen w-full">
         <div className="mx-auto flex h-screen justify-end">
           <button
             className="group items-center bg-white transition duration-500  hover:bg-slate-300 sm:px-1 md:px-2"

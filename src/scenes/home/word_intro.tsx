@@ -4,8 +4,8 @@ const Word_intro = () => {
   const wordarray: Array<string> = [
     "Programer",
     "Gamer",
-    "Electrical Engineering",
-    "Web Developer Back End and Fornt End",
+    "Electrical Engineer",
+    "Web Developer BackEnd and ForntEnd",
   ];
 
   return (
