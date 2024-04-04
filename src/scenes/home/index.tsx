@@ -9,9 +9,9 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <div className="py-20" id="home">
+    <div className="py-12" id="home">
       <motion.section
-        className="z-10 flex w-full flex-col gap-10"
+        className="z-10 flex w-full flex-col gap-5"
         onViewportEnter={() => setSelectedPage(TypeSelectedPage.Home)}
       >
         <div className=" mx-auto flex h-full w-10/12 flex-col gap-1 sm:flex-row">
@@ -40,7 +40,7 @@ const Home = ({ setSelectedPage }: Props) => {
               className="text-center font-Protest_Riot text-3xl"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: 0.05, duration: 0.7 }}
               variants={{
                 hidden: { opacity: 0.75, y: 100 },
@@ -68,14 +68,37 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
 
         <div className="flex w-full flex-col justify-center">
-          <div className="w-full">
-            <h2 className="text-center font-Protest_Revolution text-2xl">
+          <motion.div
+            className="w-full"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              hidden: { opacity: 0.75, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <h2 className="text-center font-Protest_Riot text-lg">
               INTRODUCTION
             </h2>
-          </div>
-          <div className="mx-auto w-6/12">
-            <p className="text-1xl font-Protest_Riot">Hello Guys !!!</p>
-          </div>
+          </motion.div>
+          <motion.div
+            className="mx-auto w-6/12 py-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              hidden: { opacity: 0.75, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <p className="font-Montserrat text-sm">
+              Hello Guys !!! <br></br>
+              &nbsp;&nbsp;&nbsp; My name is Rudy.
+            </p>
+          </motion.div>
         </div>
       </motion.section>
     </div>
