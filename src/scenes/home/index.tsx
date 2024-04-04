@@ -9,12 +9,12 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <div className="py-32" id="home">
+    <div className="py-20" id="home">
       <motion.section
-        className="z-10 flex w-full flex-col gap-10 md:h-28"
+        className="z-10 flex w-full flex-col gap-10"
         onViewportEnter={() => setSelectedPage(TypeSelectedPage.Home)}
       >
-        <div className="mx-auto flex h-full w-10/12 flex-col gap-1 sm:flex-row">
+        <div className=" mx-auto flex h-full w-10/12 flex-col gap-1 sm:flex-row">
           <div className="relative top-10 z-0 w-full sm:top-0 sm:w-6/12">
             <img
               className="mx-auto w-44"
@@ -66,6 +66,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </motion.div>
           </div>
         </div>
+
         <div className="flex w-full flex-col justify-center">
           <div className="w-full">
             <h2 className="text-center font-Protest_Revolution text-2xl">
