@@ -96,7 +96,15 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <p className="font-Montserrat text-sm">
               Hello Guys !!! <br></br>
-              &nbsp;&nbsp;&nbsp; My name is Rudy.
+              &nbsp;&nbsp;&nbsp; My name is Rudy. Im from Sanggau, West Borneo -
+              Indonesia and now I live on west java. I worked as a Full Stack
+              Web Developer creating web ERP and studied IoT several times,
+              studied a little data analysis, robotics and networking.
+              <br></br>
+              &nbsp;&nbsp;&nbsp; I really like programming and mechanics,
+              control systems. Sometimes learning it makes your head hurt, but
+              sometimes when you've succeeded, you feel oh it's really really
+              not difficult at all hahaha. that my introductions, thank you
             </p>
           </motion.div>
         </div>
