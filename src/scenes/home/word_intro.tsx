@@ -5,7 +5,8 @@ const Word_intro = () => {
     "Programer",
     "Gamer",
     "Electrical Engineer",
-    "Web Developer Backend and Forntend",
+    "Web Developer Backend",
+    "Web Developer Frontend",
   ];
 
   return (

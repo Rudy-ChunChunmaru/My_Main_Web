@@ -67,7 +67,17 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
         </div>
 
-        <div className="flex w-full flex-col justify-center">
+        <motion.div
+          className="mx-auto flex w-9/12 flex-col justify-center rounded-md border-2 border-indigo-300 p-5 sm:w-6/12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+          variants={{
+            hidden: { opacity: 0.75, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
           <motion.div
             className="w-full"
             initial="hidden"
@@ -84,7 +94,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </h2>
           </motion.div>
           <motion.div
-            className="mx-auto w-6/12 py-3"
+            className="mx-auto  py-3 "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
@@ -107,7 +117,7 @@ const Home = ({ setSelectedPage }: Props) => {
               not difficult at all hahaha. that my introductions, thank you
             </p>
           </motion.div>
-        </div>
+        </motion.div>
       </motion.section>
     </div>
   );
