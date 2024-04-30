@@ -1,9 +1,4 @@
-import {
-  ArrowDownIcon,
-  MapPinIcon,
-  UserIcon,
-  CalendarIcon,
-} from "@heroicons/react/24/solid";
+import Experience_detail from "./Experience_detail";
 
 const data_experince = [
   {
@@ -128,61 +123,13 @@ const data_experince = [
 
 const Sub_Experience = data_experince.map((data) => {
   return (
-    <div className="mt-3 flex">
-      <div className="h-28 sm:h-14">
-        <button className="h-full rounded-md border-2 align-top">
-          <ArrowDownIcon className="w-6 align-top"></ArrowDownIcon>
-        </button>
-      </div>
-
-      <div className="flex-row pl-3">
-        {/* Head */}
-        <div className="h-28 flex-row justify-center sm:h-14">
-          <div>{data.title}</div>
-          <div className="flex-row gap-5 sm:flex">
-            <div className="flex">
-              <UserIcon className="w-5"></UserIcon>&nbsp;{data.info}{" "}
-            </div>
-            <div className="flex">
-              <CalendarIcon className="w-5"></CalendarIcon>&nbsp;{data.periode}
-            </div>
-            <div className="flex">
-              <MapPinIcon className="w-5"></MapPinIcon>&nbsp;{data.location}
-            </div>
-          </div>
-        </div>
-
-        {/* all info */}
-        <div className="flex">
-          <div className="mr-3 w-2 rounded-xl bg-yellow-400">&nbsp;</div>
-
-          <table className="w-full">
-            {data.detali.map((datadetail) => {
-              const classnamediv = function (doing: string): string {
-                if (doing == "Training") return "bg-red-900";
-                if (doing == "Activity") return "bg-yellow-700";
-                if (doing == "Project") return "bg-neutral-600";
-                else return "bg-slate-600";
-              };
-
-              return (
-                <tr className={"w-full " + classnamediv(datadetail.doing)}>
-                  <td className="hidden px-5 text-center md:inline ">
-                    {datadetail.time}
-                  </td>
-                  <td className="hidden px-5 text-left sm:inline ">
-                    {datadetail.doing}
-                  </td>
-                  <td className="px-5 text-left">{datadetail.info}</td>
-                </tr>
-              );
-            })}
-          </table>
-        </div>
-
-        {/* just one */}
-      </div>
-    </div>
+    <Experience_detail
+      title={data.title}
+      periode={data.periode}
+      location={data.location}
+      info={data.info}
+      detali={data.detali}
+    ></Experience_detail>
   );
 });
 
