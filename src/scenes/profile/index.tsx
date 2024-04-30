@@ -14,7 +14,7 @@ const Profile = ({ setSelectedPage }: Props) => {
       onViewportEnter={() => setSelectedPage(TypeSelectedPage.Profile)}
     >
       <div className="mx-auto w-full bg-slate-300 p-1 sm:p-3 md:p-5">
-        <div className="flex-row">
+        <div className="mx-auto ml-5 w-11/12 flex-row">
           <div className="mb-2 rounded-md bg-slate-800 py-5 text-center">
             MY PROFILE
           </div>
