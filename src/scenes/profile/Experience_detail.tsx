@@ -47,7 +47,7 @@ const Experience_detail = ({
       className="mt-3 flex rounded-md border-2 border-indigo-300 p-1"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.3 * times }}
       variants={{
         hidden: { opacity: 0, y: -25 * times },
@@ -96,7 +96,7 @@ const Experience_detail = ({
                     }
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.5 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.1 * index }}
                     variants={{
                       hidden: { opacity: 0, y: -25 * index },
@@ -120,19 +120,19 @@ const Experience_detail = ({
         {/* just one info */}
         {!dataExpan && (
           <motion.div
-            className="flex w-full rounded-md bg-slate-300 p-2  text-black"
+            className="flex w-full rounded-md bg-slate-300 p-1 text-black"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.5 }}
-            transition={{ duration: 0.5 * times }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: -25 * times },
+              hidden: { opacity: 0, y: -20 },
               visible: { opacity: 1, y: 0 },
             }}
           >
             <div
               className={
-                "hidden rounded-md px-2 text-white sm:block " +
+                "hidden rounded-md px-1 text-white sm:block " +
                 classnamediv(detali[rnd].doing)
               }
             >

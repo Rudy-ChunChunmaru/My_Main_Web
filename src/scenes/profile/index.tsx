@@ -11,11 +11,11 @@ const Profile = ({ setSelectedPage }: Props) => {
   return (
     <motion.section
       id="profile"
-      className="z-40 mt-5 h-fit w-full"
+      className="z-40 mt-3 h-fit w-full"
       onViewportEnter={() => setSelectedPage(TypeSelectedPage.Profile)}
     >
       <div className="mx-auto w-full bg-slate-300 p-1 sm:p-3 md:p-5">
-        <div className="mx-auto ml-5 w-11/12 flex-row">
+        <div className="mx-auto ml-3 w-11/12 flex-row">
           <div className="mb-2 rounded-md bg-slate-800 py-5 text-center">
             MY PROFILE
           </div>
