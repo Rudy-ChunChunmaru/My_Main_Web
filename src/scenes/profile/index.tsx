@@ -1,6 +1,7 @@
 import { TypeSelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Experience from "./Experience";
+import Skill from "./Skill";
 
 type Props = {
   setSelectedPage: (value: TypeSelectedPage) => void;
@@ -21,6 +22,10 @@ const Profile = ({ setSelectedPage }: Props) => {
 
           <div className="mb-2 flex rounded-md bg-slate-800 p-5">
             <Experience></Experience>
+          </div>
+
+          <div className="mb-2 flex rounded-md bg-slate-800 p-5">
+            <Skill></Skill>
           </div>
         </div>
       </div>

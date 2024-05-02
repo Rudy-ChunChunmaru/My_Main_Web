@@ -16,6 +16,7 @@ type detailtype = {
 };
 
 type Props = {
+  times: number;
   title: string;
   info: string;
   periode: string;
@@ -24,6 +25,7 @@ type Props = {
 };
 
 const Experience_detail = ({
+  times,
   title,
   info,
   periode,
@@ -46,9 +48,9 @@ const Experience_detail = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.5 }}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.3 * times }}
       variants={{
-        hidden: { opacity: 0, y: -50 },
+        hidden: { opacity: 0, y: -25 * times },
         visible: { opacity: 1, y: 0 },
       }}
     >
@@ -85,13 +87,21 @@ const Experience_detail = ({
             <div className="mr-3 w-2 rounded-xl bg-yellow-400">&nbsp;</div>
 
             <div className="w-full flex-col justify-start">
-              {detali.map((datadetail: detailtype) => {
+              {detali.map((datadetail: detailtype, index) => {
                 return (
-                  <div
+                  <motion.div
                     className={
                       "my-1 flex w-full justify-start rounded-md " +
                       classnamediv(datadetail.doing)
                     }
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ duration: 0.1 * index }}
+                    variants={{
+                      hidden: { opacity: 0, y: -25 * index },
+                      visible: { opacity: 1, y: 0 },
+                    }}
                   >
                     <div className="hidden w-20  pl-3 md:block">
                       {datadetail.time}
@@ -100,7 +110,7 @@ const Experience_detail = ({
                       {datadetail.doing}
                     </div>
                     <div className="pr-3">{datadetail.info}</div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -109,16 +119,27 @@ const Experience_detail = ({
 
         {/* just one info */}
         {!dataExpan && (
-          <div className="flex w-full rounded-md bg-slate-300 p-2 text-black">
+          <motion.div
+            className="flex w-full rounded-md bg-slate-300 p-2  text-black"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.5 * times }}
+            variants={{
+              hidden: { opacity: 0, y: -25 * times },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <div
               className={
-                "rounded-md px-2 text-white " + classnamediv(detali[rnd].doing)
+                "hidden rounded-md px-2 text-white sm:block " +
+                classnamediv(detali[rnd].doing)
               }
             >
               {detali[rnd].doing}
             </div>
             <div className="pl-2">{detali[rnd].info}</div>
-          </div>
+          </motion.div>
         )}
       </div>
     </motion.div>

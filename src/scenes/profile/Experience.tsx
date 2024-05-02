@@ -121,9 +121,10 @@ const data_experince = [
   },
 ];
 
-const Sub_Experience = data_experince.map((data) => {
+const Sub_Experience = data_experince.map((data, index) => {
   return (
     <Experience_detail
+      times={index}
       title={data.title}
       periode={data.periode}
       location={data.location}
