@@ -1,26 +1,26 @@
-type dataskilltype = {
-  katergori: string;
-  setskill: {
-    title: string;
-    point: number;
-  }[];
-};
+// type dataskilltype = {
+//   katergori: string;
+//   setskill: {
+//     title: string;
+//     point: number;
+//   }[];
+// };
 
-const dataskill: dataskilltype[] = [
-  {
-    katergori: "Programing",
-    setskill: [
-      {
-        title: "python",
-        point: 7,
-      },
-      {
-        title: "C++",
-        point: 5,
-      },
-    ],
-  },
-];
+// const dataskill: dataskilltype[] = [
+//   {
+//     katergori: "Programing",
+//     setskill: [
+//       {
+//         title: "python",
+//         point: 7,
+//       },
+//       {
+//         title: "C++",
+//         point: 5,
+//       },
+//     ],
+//   },
+// ];
 
 const Skill = () => {
   return (
