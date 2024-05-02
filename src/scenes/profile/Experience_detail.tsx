@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   ArrowUpIcon,
   ArrowDownIcon,
@@ -30,8 +31,27 @@ const Experience_detail = ({
   detali,
 }: Props) => {
   const [dataExpan, setdataExpan] = useState<boolean>(false);
+  let rnd = Math.floor(Math.random() * detali.length);
+
+  const classnamediv = function (doing: string): string {
+    if (doing == "Training") return "bg-red-900";
+    if (doing == "Activity") return "bg-yellow-700";
+    if (doing == "Project") return "bg-neutral-600";
+    else return "bg-slate-600";
+  };
+
   return (
-    <div className="mt-3 flex">
+    <motion.div
+      className="mt-3 flex rounded-md border-2 border-indigo-300 p-1"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.7 }}
+      variants={{
+        hidden: { opacity: 0, y: -50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
       <div className="h-28 sm:h-14">
         <button
           className="relative z-0 h-full rounded-md border-2 align-top hover:bg-gray-500 "
@@ -42,7 +62,7 @@ const Experience_detail = ({
         </button>
       </div>
 
-      <div className="flex-row pl-3">
+      <div className="w-full flex-row pl-3 ">
         {/* Head info */}
         <div className="h-28 flex-col justify-between sm:h-14">
           <div>{title}</div>
@@ -66,13 +86,6 @@ const Experience_detail = ({
 
             <div className="w-full flex-col justify-start">
               {detali.map((datadetail: detailtype) => {
-                const classnamediv = function (doing: string): string {
-                  if (doing == "Training") return "bg-red-900";
-                  if (doing == "Activity") return "bg-yellow-700";
-                  if (doing == "Project") return "bg-neutral-600";
-                  else return "bg-slate-600";
-                };
-
                 return (
                   <div
                     className={
@@ -95,9 +108,20 @@ const Experience_detail = ({
         )}
 
         {/* just one info */}
-        {!dataExpan && <div>????</div>}
+        {!dataExpan && (
+          <div className="flex w-full rounded-md bg-slate-300 p-2 text-black">
+            <div
+              className={
+                "rounded-md px-2 text-white " + classnamediv(detali[rnd].doing)
+              }
+            >
+              {detali[rnd].doing}
+            </div>
+            <div className="pl-2">{detali[rnd].info}</div>
+          </div>
+        )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
