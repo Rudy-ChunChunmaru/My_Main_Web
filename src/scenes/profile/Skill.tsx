@@ -45,7 +45,7 @@ const dataskill: dataskilltype[] = [
 const Sub_Skill = dataskill.map((data, index) => {
   return (
     <Skill_detail
-      times={index}
+      times={index + 1}
       kategori={data.katergori}
       setskill={data.setskill}
     ></Skill_detail>
