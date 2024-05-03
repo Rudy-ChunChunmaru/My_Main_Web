@@ -18,7 +18,7 @@ function App() {
 
       <Profile setSelectedPage={setSelectedPage} />
 
-      <Portofolio />
+      <Portofolio setSelectedPage={setSelectedPage} />
     </div>
   );
 }
