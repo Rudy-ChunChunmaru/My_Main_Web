@@ -48,7 +48,7 @@ const data_cv = [
 
 const Media = () => {
   return (
-    <div className="flex w-full justify-between gap-2 px-2 py-2">
+    <div className="w-full flex-row justify-between gap-2 px-2 py-2 sm:flex">
       <div className="w-full flex-row rounded-md border-2 p-1">
         <div className="mb-3 text-center">Media</div>
         <div className="flex justify-center gap-2">
