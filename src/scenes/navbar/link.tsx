@@ -4,6 +4,7 @@ import {
   HomeIcon,
   UserCircleIcon,
   DocumentTextIcon,
+  UserIcon,
 } from "@heroicons/react/24/solid";
 
 type Props = {
@@ -43,6 +44,14 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
         )}
         {page == "Portofolio" && (
           <DocumentTextIcon
+            className={`mr-5 mt-1 h-6 w-6  ${
+              selectedPage === lowerCasePage ? "text-gray-400" : ""
+            }
+          text-black  transition duration-500 hover:text-gray-600`}
+          />
+        )}
+        {page == "Media" && (
+          <UserIcon
             className={`mr-5 mt-1 h-6 w-6  ${
               selectedPage === lowerCasePage ? "text-gray-400" : ""
             }

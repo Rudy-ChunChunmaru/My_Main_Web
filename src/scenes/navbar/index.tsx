@@ -62,6 +62,11 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+            <Link
+              page="Media"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
           </div>
         </motion.div>
       )}

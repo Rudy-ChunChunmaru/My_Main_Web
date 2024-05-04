@@ -2,6 +2,7 @@ import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
 import Profile from "@/scenes/profile";
 import Portofolio from "@/scenes/portofolio";
+import Media from "@/scenes/media";
 import { useState } from "react";
 import { TypeSelectedPage } from "@/shared/types";
 
@@ -19,6 +20,8 @@ function App() {
       <Profile setSelectedPage={setSelectedPage} />
 
       <Portofolio setSelectedPage={setSelectedPage} />
+
+      <Media setSelectedPage={setSelectedPage} />
     </div>
   );
 }
