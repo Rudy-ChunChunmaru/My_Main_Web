@@ -146,7 +146,7 @@ const Bottom = () => {
         }}
       >
         <div className="flex-row justify-start gap-2 pr-11 sm:flex">
-          <div className="h-fit w-fit rounded-br-3xl border-2 border-slate-300 py-1 pl-3 pr-5 ">
+          <div className="h-fit w-full rounded-br-3xl border-2 border-slate-300 py-1 pl-3 pr-5 sm:w-fit">
             <strong>Made By @ Rudy - ChunChunMaru</strong>
           </div>
           <div className="h-fit w-fit flex-row px-4 py-1 sm:flex">
@@ -154,7 +154,7 @@ const Bottom = () => {
               <strong>Suppot frame Web :</strong>
             </div>
 
-            <div className="flex w-11/12 justify-start gap-2">
+            <div className="flex w-full flex-wrap justify-start gap-2 sm:w-fit">
               {data_suppot.map((data: datasuppottype, index) => {
                 return (
                   <motion.div
