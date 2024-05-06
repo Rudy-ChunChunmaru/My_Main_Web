@@ -162,7 +162,7 @@ const Bottom = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false }}
-                    transition={{ duration: 0.2 * (index + 1) }}
+                    transition={{ duration: 0.3 * (index + 1) }}
                     variants={{
                       hidden: { opacity: 0.75, x: -50 * (index + 1) },
                       visible: { opacity: 1, x: 0 },
