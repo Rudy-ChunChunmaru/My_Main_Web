@@ -17,7 +17,7 @@ const Profile = ({ setSelectedPage }: Props) => {
       <div className="mx-auto w-full bg-slate-300 p-1 sm:p-3 md:p-5">
         <div className="mx-auto ml-3 w-11/12 flex-row">
           <div className="mb-2 rounded-md bg-slate-800 py-5 text-center">
-            MY PROFILE
+            <strong>MY PROFILE</strong>
           </div>
 
           <div className="mb-2 flex rounded-md bg-slate-800 p-5">

@@ -14,7 +14,7 @@ const Portofolio = ({ setSelectedPage }: Props) => {
     >
       <div className="mx-auto ml-3 w-11/12 flex-row">
         <div className="mb-2 w-full rounded-md bg-slate-300 py-5 text-center">
-          MY PORTOFOLIO
+          <strong>MY PORTOFOLIO</strong>
         </div>
         <div className="mb-2 flex rounded-md bg-slate-300">&nbsp;</div>
       </div>

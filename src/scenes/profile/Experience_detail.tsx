@@ -99,7 +99,7 @@ const Experience_detail = ({
                     viewport={{ once: true }}
                     transition={{ duration: 0.1 * index }}
                     variants={{
-                      hidden: { opacity: 0, y: -25 * index },
+                      hidden: { opacity: 0.75, y: -25 * index },
                       visible: { opacity: 1, y: 0 },
                     }}
                   >
@@ -126,7 +126,7 @@ const Experience_detail = ({
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: -20 },
+              hidden: { opacity: 0.25, y: -20 },
               visible: { opacity: 1, y: 0 },
             }}
           >

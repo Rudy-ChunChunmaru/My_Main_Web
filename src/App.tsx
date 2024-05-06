@@ -3,6 +3,7 @@ import Home from "@/scenes/home";
 import Profile from "@/scenes/profile";
 import Portofolio from "@/scenes/portofolio";
 import Media from "@/scenes/media";
+import Bottom from "@/scenes/bottom";
 import { useState } from "react";
 import { TypeSelectedPage } from "@/shared/types";
 
@@ -22,6 +23,8 @@ function App() {
       <Portofolio setSelectedPage={setSelectedPage} />
 
       <Media setSelectedPage={setSelectedPage} />
+
+      <Bottom />
     </div>
   );
 }

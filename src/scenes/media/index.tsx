@@ -10,15 +10,15 @@ const index = ({ setSelectedPage }: Props) => {
   return (
     <motion.div
       id="media"
-      className="z-40 w-full bg-slate-300 px-3 pt-5"
+      className="z-40 w-full bg-slate-300 px-3 py-5"
       onViewportEnter={() => setSelectedPage(TypeSelectedPage.Media)}
     >
       <div className="mx-auto ml-3 w-11/12 flex-row">
         <div className="mb-2 w-full rounded-md bg-slate-800 py-5 text-center">
-          MY MEDIA
+          <strong>MY MEDIA</strong>
         </div>
 
-        <div className="mb-2 rounded-md bg-slate-800">
+        <div className="rounded-md bg-slate-800">
           <Media></Media>
         </div>
       </div>
