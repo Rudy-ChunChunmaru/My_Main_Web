@@ -75,7 +75,9 @@ const Media = () => {
                   className="z-0 flex w-full rounded-md border-2 hover:bg-gray-500"
                   onClick={() => window.open(data.link, "_blank")}
                 >
-                  <div className="w-2/12 bg-slate-300">{data.logo}</div>
+                  <div className="hidden h-full w-2/12 bg-slate-300 sm:block">
+                    {data.logo}
+                  </div>
                   <div className="my-auto px-2">{data.title}</div>
                 </button>
               );
@@ -92,7 +94,7 @@ const Media = () => {
                 className="z-0 flex w-full rounded-md border-2 hover:bg-gray-500"
                 onClick={() => window.open(data.link, "_blank")}
               >
-                <div className="w-2/12 bg-slate-300">
+                <div className="hidden h-full w-2/12 bg-slate-300 sm:block">
                   <DocumentIcon className="text-black"></DocumentIcon>
                 </div>
                 <div className="my-auto px-2">{data.title}</div>
