@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { TypeSelectedPage } from "@/shared/types";
+import {
+  HomeIcon,
+  UserCircleIcon,
+  DocumentTextIcon,
+  UserIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/solid";
 import Link from "./link";
 
 type Props = {
@@ -9,21 +16,61 @@ type Props = {
   setSelectedPage: (value: TypeSelectedPage) => void;
 };
 
+type datanavbartype = {
+  title: string;
+  logo: JSX.Element;
+};
+
+const data_nav_bar: datanavbartype[] = [
+  {
+    title: "Home",
+    logo: <HomeIcon className="fill-current"></HomeIcon>,
+  },
+  {
+    title: "Profile",
+    logo: <UserCircleIcon className="fill-current"></UserCircleIcon>,
+  },
+  {
+    title: "Portofolio",
+    logo: <DocumentTextIcon className="fill-current"></DocumentTextIcon>,
+  },
+  {
+    title: "Media",
+    logo: <UserIcon className="fill-current"></UserIcon>,
+  },
+  {
+    title: "ContactMe",
+    logo: <EnvelopeIcon className="fill-current"></EnvelopeIcon>,
+  },
+];
+
 const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
   const [isMeanuToggled, setIsMenuToggled] = useState<boolean>(false);
 
   return (
     <nav>
-      <div className="z-100 fixed top-0 h-screen w-full">
-        <div className="mx-auto flex h-screen justify-end">
-          <button
-            className="group items-center bg-white transition duration-500  hover:bg-slate-300 sm:px-1 md:px-2"
-            onClick={() => setIsMenuToggled(!isMeanuToggled)}
-          >
-            <Bars3Icon className="h-6 w-6 text-black group-hover:sm:mx-2  group-hover:md:mx-4" />
-          </button>
-        </div>
-      </div>
+      {!isMeanuToggled && (
+        <motion.div
+          className="z-100 fixed top-0 h-screen w-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.3 }}
+          variants={{
+            hidden: { opacity: 0.75, x: 30 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <div className="mx-auto flex h-screen justify-end">
+            <button
+              className="group items-center border-4 border-white bg-white transition duration-500 hover:border-l-gray-500  hover:bg-slate-300 sm:px-1 md:px-2"
+              onClick={() => setIsMenuToggled(!isMeanuToggled)}
+            >
+              <Bars3Icon className="h-6 w-6 text-black group-hover:sm:mx-2  group-hover:md:mx-4" />
+            </button>
+          </div>
+        </motion.div>
+      )}
 
       {/* MENU */}
       {isMeanuToggled && (
@@ -31,7 +78,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-white drop-shadow-xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.7 }}
           variants={{
             hidden: { opacity: 0.75, x: 150 },
@@ -39,34 +86,27 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           }}
         >
           {/* Close ICON */}
-          <div className="flex justify-end p-12">
-            <button onClick={() => setIsMenuToggled(!isMeanuToggled)}>
-              <XMarkIcon className=" h-6 w-6 text-gray-400"></XMarkIcon>
+          <div className="flex justify-end p-10">
+            <button
+              className="rounded-lg border-2 border-gray-400 text-gray-400 transition duration-500 hover:border-gray-600 hover:text-gray-600"
+              onClick={() => setIsMenuToggled(!isMeanuToggled)}
+            >
+              <XMarkIcon className="h-6 w-6 fill-current "></XMarkIcon>
             </button>
           </div>
 
           {/* MENU */}
-          <div className={`ml-[33%] flex flex-col gap-10 text-2xl`}>
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Profile"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Portofolio"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Media"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+          <div className={`ml-[20%] flex flex-col gap-2 text-2xl`}>
+            {data_nav_bar.map((data: datanavbartype) => {
+              return (
+                <Link
+                  page={data.title}
+                  logo={data.logo}
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+              );
+            })}
           </div>
         </motion.div>
       )}

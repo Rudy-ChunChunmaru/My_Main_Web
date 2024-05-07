@@ -1,64 +1,36 @@
 import { TypeSelectedPage } from "@/shared/types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import {
-  HomeIcon,
-  UserCircleIcon,
-  DocumentTextIcon,
-  UserIcon,
-} from "@heroicons/react/24/solid";
 
 type Props = {
   page: string;
+  logo: JSX.Element;
   selectedPage: TypeSelectedPage;
   setSelectedPage: (value: TypeSelectedPage) => void;
 };
 
-const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
+const Link = ({ page, logo, selectedPage, setSelectedPage }: Props) => {
   const lowerCasePage = page
     .toLocaleLowerCase()
     .replace(/ /g, "") as TypeSelectedPage;
 
   return (
     <AnchorLink
-      className={`  ${selectedPage === lowerCasePage ? "text-gray-400" : ""}
-      text-black  transition duration-500 hover:text-gray-600`}
+      className={`${
+        selectedPage === lowerCasePage ? "border-gray-600 text-gray-400" : ""
+      } mr-5 rounded-xl border-2 border-white py-1 pl-3 text-black filter transition duration-500 hover:border-gray-600 hover:text-gray-600`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
       <div className="flex">
-        {page == "Home" && (
-          <HomeIcon
-            className={`mr-5 mt-1 h-6 w-6  ${
-              selectedPage === lowerCasePage ? "text-gray-400" : ""
-            }
-          text-black  transition duration-500 hover:text-gray-600`}
-          />
-        )}
-        {page == "Profile" && (
-          <UserCircleIcon
-            className={`mr-5 mt-1 h-6 w-6  ${
-              selectedPage === lowerCasePage ? "text-gray-400" : ""
-            }
-          text-black  transition duration-500 hover:text-gray-600`}
-          />
-        )}
-        {page == "Portofolio" && (
-          <DocumentTextIcon
-            className={`mr-5 mt-1 h-6 w-6  ${
-              selectedPage === lowerCasePage ? "text-gray-400" : ""
-            }
-          text-black  transition duration-500 hover:text-gray-600`}
-          />
-        )}
-        {page == "Media" && (
-          <UserIcon
-            className={`mr-5 mt-1 h-6 w-6  ${
-              selectedPage === lowerCasePage ? "text-gray-400" : ""
-            }
-          text-black  transition duration-500 hover:text-gray-600`}
-          />
-        )}
-        {<a>{page}</a>}
+        <div
+          className={`mr-4 h-8 w-8   ${
+            selectedPage === lowerCasePage ? "bg-gray-600 text-gray-400" : ""
+          }
+           rounded-full bg-slate-900 p-1 text-white`}
+        >
+          {logo}
+        </div>
+        {<a className="my-auto">{page}</a>}
       </div>
     </AnchorLink>
   );
