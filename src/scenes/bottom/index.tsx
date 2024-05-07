@@ -9,7 +9,7 @@ type datasuppottype = {
 const data_suppot: datasuppottype[] = [
   {
     title: "Github",
-    link: "",
+    link: "https://github.com/",
     logo: (
       <svg
         viewBox="0 0 24 24"
@@ -141,9 +141,9 @@ const data_suppot: datasuppottype[] = [
 
 const Bottom = () => {
   return (
-    <div className="relative -z-50 w-full bg-slate-300">
+    <div className="relative z-40 w-full bg-slate-300">
       <motion.div
-        className="relative -z-40 h-fit w-full bg-neutral-800"
+        className="relative z-50 h-fit w-full bg-neutral-800"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -166,7 +166,7 @@ const Bottom = () => {
               {data_suppot.map((data: datasuppottype, index: number) => {
                 return (
                   <motion.div
-                    className="flex w-fit flex-row gap-2 rounded-xl border-2 px-3 py-1  sm:flex-col"
+                    className="flex w-fit flex-row gap-2 rounded-xl border-2 px-3 py-1 transition duration-100 hover:bg-black sm:flex-col"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false }}
@@ -175,8 +175,9 @@ const Bottom = () => {
                       hidden: { opacity: 0.75, x: -25 },
                       visible: { opacity: 1, x: 0 },
                     }}
+                    onClick={() => window.open(data.link, "_blank")}
                   >
-                    <div className="mx-auto h-fit w-6 rounded-full bg-white p-1 sm:w-12">
+                    <div className="mx-auto h-fit w-6 rounded-full bg-white p-1 sm:w-7">
                       {data.logo}
                     </div>
                     <div>{data.title}</div>
