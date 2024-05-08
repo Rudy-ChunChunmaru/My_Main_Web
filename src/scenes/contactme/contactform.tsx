@@ -44,12 +44,15 @@ const ContactForm = () => {
       );
     } else {
       alert(valid.error_message);
+      // return;
+      // console.log("gagal terkirim! <br>", valid.error_message);
     }
   };
 
   return (
     <div className=" mx-auto mb-2 w-10/12 rounded-md bg-slate-300 px-5 py-7">
       <form
+        method="get"
         onSubmit={sendEmail}
         className="m-auto mb-3 flex w-full flex-wrap gap-5 px-5"
       >
