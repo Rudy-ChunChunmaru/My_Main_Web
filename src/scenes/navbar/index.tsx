@@ -75,7 +75,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
       {/* MENU */}
       {isMeanuToggled && (
         <motion.div
-          className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-white drop-shadow-xl"
+          className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-white"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
