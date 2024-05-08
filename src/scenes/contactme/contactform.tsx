@@ -1,25 +1,55 @@
+import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 import { useState } from "react";
+
+// untuk cek input pada Form
+import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
   const [name, SetName] = useState("");
   const [email, SetEmail] = useState("");
   const [message, SetMessage] = useState("");
 
-  const cekFormInput: () => boolean = () => {
-    return false;
+  const {
+    register,
+    trigger,
+    getValues,
+    formState: { errors },
+  } = useForm();
+
+  const errormessageview: (message: string) => JSX.Element = (message) => {
+    return (
+      <motion.div
+        className="relative bottom-3 w-full rounded-lg border-2 border-red-600 bg-white "
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+      >
+        <div className="my-auto flex w-full justify-between pl-1">
+          <div className="text-red-500">
+            <strong>{message}</strong>
+          </div>
+          <div className="w-7 bg-red-600 text-white">
+            <ExclamationCircleIcon></ExclamationCircleIcon>
+          </div>
+        </div>
+      </motion.div>
+    );
   };
 
-  const sendEmail = (e: any) => {
-    const valid: { status: boolean; error_message: string } = {
-      status: cekFormInput(),
-      error_message: "sory, is not ready to send message !!!",
-    };
+  const sendEmail = async (event: any) => {
+    //This is important, i'm not sure why, but the email won't send without it
+    event.preventDefault();
 
-    if (valid.status) {
-      //This is important, i'm not sure why, but the email won't send without it
-      e.preventDefault();
+    const Isvalid = await trigger();
 
+    if (Isvalid) {
       // parameter
       const SERVICE_ID = "service_h00pj9i";
       const TEMPLATE_ID = "template_qqopk77";
@@ -42,45 +72,78 @@ const ContactForm = () => {
           console.log("gagal terkirim! <br>", error.text);
         }
       );
-    } else {
-      alert(valid.error_message);
-      // return;
-      // console.log("gagal terkirim! <br>", valid.error_message);
     }
   };
 
   return (
     <div className=" mx-auto mb-2 w-10/12 rounded-md bg-slate-300 px-5 py-7">
       <form
-        method="get"
+        target="_blank"
+        method="POST"
         onSubmit={sendEmail}
-        className="m-auto mb-3 flex w-full flex-wrap gap-5 px-5"
+        className="m-auto mb-3 flex w-full flex-wrap gap-3 px-5"
       >
         <input
           type="text"
           className="relative z-0 w-full rounded-lg px-2 py-1"
-          name="from_name"
           placeholder="Name"
-          onChange={(e) => SetName(e.target.value)}
+          {...register("from_name", {
+            required: true,
+            maxLength: 30,
+          })}
         />
+        {errors.from_name &&
+          errors.from_name.type === "required" &&
+          errormessageview("This field is required.")}
+        {errors.from_name &&
+          errors.from_name.type === "maxLength" &&
+          errormessageview("Max Length is 30 char")}
+
         <input
-          type="email"
+          type="text"
           className="relative z-0 w-full rounded-lg px-2 py-1"
-          name="from_email"
           placeholder="Email"
-          onChange={(e) => SetEmail(e.target.value)}
+          {...register("from_email", {
+            required: true,
+            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9._%+-]+\.[A-Z]{2,}$/i,
+            maxLength: 30,
+          })}
         />
+        {errors.from_email &&
+          errors.from_email.type === "required" &&
+          errormessageview("This field is required.")}
+        {errors.from_email &&
+          errors.from_email.type === "pattern" &&
+          errormessageview("Invalid email address.")}
+        {errors.from_email &&
+          errors.from_email.type === "maxLength" &&
+          errormessageview("Max Length is 30 char")}
+
         <textarea
           className="relative z-0 h-24 w-full rounded-lg px-2 py-1"
-          name="html_message"
           placeholder="Message"
-          onChange={(e) => SetMessage(e.target.value)}
+          {...register("form_message", {
+            required: true,
+            maxLength: 1000,
+          })}
         ></textarea>
+        {errors.form_message &&
+          errors.form_message.type === "required" &&
+          errormessageview("This field is required.")}
+        {errors.form_message &&
+          errors.form_message.type === "maxLength" &&
+          errormessageview("Max Length is 1000 char.")}
+
         <div className="flex w-full justify-center">
           <strong>
             <input
               type="submit"
               value="Form Submit"
+              onClick={() => {
+                () => SetName(getValues("from_name"));
+                () => SetEmail(getValues("from_email"));
+                () => SetMessage(getValues("form_message"));
+              }}
               className="relative z-0 rounded-lg border-2 border-slate-900 p-2 hover:border-slate-600 hover:bg-slate-400"
             />
           </strong>
