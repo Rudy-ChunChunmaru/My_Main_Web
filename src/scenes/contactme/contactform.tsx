@@ -1,7 +1,7 @@
 import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 
 // untuk cek input pada Form
 import { useForm } from "react-hook-form";
