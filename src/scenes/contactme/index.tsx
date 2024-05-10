@@ -13,7 +13,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
       className="z-40 w-full bg-slate-800 px-3 py-5"
       onViewportEnter={() => setSelectedPage(TypeSelectedPage.ContactMe)}
     >
-      <div className="mx-auto ml-3 w-full  flex-row text-black sm:w-11/12">
+      <div className="mx-auto ml-3 w-11/12 flex-row text-black">
         <div className="mx-auto mb-2 w-full rounded-md bg-slate-300 py-5 text-center sm:w-10/12">
           <strong>Leave me Message</strong>
         </div>
