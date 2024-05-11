@@ -8,6 +8,8 @@ import {
   CalendarIcon,
 } from "@heroicons/react/24/solid";
 
+import Experience_detail_expan_no from "./Experience_detail_expan_no";
+
 type detailtype = {
   time: number;
   doing: string;
@@ -21,7 +23,7 @@ type Props = {
   info: string;
   periode: string;
   location: string;
-  detali: detailtype[];
+  detail: detailtype[];
 };
 
 const Experience_detail = ({
@@ -30,10 +32,9 @@ const Experience_detail = ({
   info,
   periode,
   location,
-  detali,
+  detail,
 }: Props) => {
   const [dataExpan, setdataExpan] = useState<boolean>(false);
-  let rnd = Math.floor(Math.random() * detali.length);
 
   const classnamediv = function (doing: string): string {
     if (doing == "Training") return "bg-red-900";
@@ -56,7 +57,7 @@ const Experience_detail = ({
     >
       <div className="h-28 sm:h-14">
         <button
-          className="relative z-0 h-full rounded-md border-2 align-top hover:bg-gray-500 "
+          className="relative z-0 h-full rounded-md border-2 align-top hover:bg-gray-500"
           onClick={() => setdataExpan(!dataExpan)}
         >
           {!dataExpan && <ArrowDownIcon className="w-6"></ArrowDownIcon>}
@@ -87,7 +88,7 @@ const Experience_detail = ({
             <div className="mr-3 w-2 rounded-xl bg-yellow-400">&nbsp;</div>
 
             <div className="w-full flex-col justify-start">
-              {detali.map((datadetail: detailtype, index) => {
+              {detail.map((datadetail: detailtype, index) => {
                 return (
                   <motion.div
                     className={
@@ -119,27 +120,9 @@ const Experience_detail = ({
 
         {/* just one info */}
         {!dataExpan && (
-          <motion.div
-            className="flex w-full rounded-md bg-slate-300 p-1 text-black"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0.25, y: -20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div
-              className={
-                "hidden rounded-md px-1 text-white sm:block " +
-                classnamediv(detali[rnd].doing)
-              }
-            >
-              {detali[rnd].doing}
-            </div>
-            <div className="pl-2">{detali[rnd].info}</div>
-          </motion.div>
+          <Experience_detail_expan_no
+            detail={detail}
+          ></Experience_detail_expan_no>
         )}
       </div>
     </motion.div>

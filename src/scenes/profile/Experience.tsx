@@ -6,7 +6,7 @@ const data_experince = [
     periode: "2018 - 2022",
     location: "Bandung",
     info: "Electrical Engineer S1",
-    detali: [
+    detail: [
       {
         time: 2019,
         doing: "Activity",
@@ -86,7 +86,7 @@ const data_experince = [
     periode: "2023 - now",
     location: "Padalalarang",
     info: "Full Stack Web Developer",
-    detali: [
+    detail: [
       {
         time: 2023,
         doing: "Training",
@@ -129,7 +129,7 @@ const Sub_Experience = data_experince.map((data, index) => {
       periode={data.periode}
       location={data.location}
       info={data.info}
-      detali={data.detali}
+      detail={data.detail}
     ></Experience_detail>
   );
 });
