@@ -24,6 +24,7 @@ type Props = {
   periode: string;
   location: string;
   detail: detailtype[];
+  logo: JSX.Element;
 };
 
 const Experience_detail = ({
@@ -33,6 +34,7 @@ const Experience_detail = ({
   periode,
   location,
   detail,
+  logo,
 }: Props) => {
   const [dataExpan, setdataExpan] = useState<boolean>(false);
 
@@ -67,19 +69,22 @@ const Experience_detail = ({
 
       <div className="w-full flex-row pl-3 ">
         {/* Head info */}
-        <div className="h-28 flex-col justify-between sm:h-14">
-          <div>{title}</div>
-          <div className="flex-row gap-5 sm:flex">
-            <div className="flex">
-              <UserIcon className="w-5"></UserIcon>&nbsp;{info}{" "}
-            </div>
-            <div className="flex">
-              <CalendarIcon className="w-5"></CalendarIcon>&nbsp;{periode}
-            </div>
-            <div className="flex">
-              <MapPinIcon className="w-5"></MapPinIcon>&nbsp;{location}
+        <div className="flex justify-between">
+          <div className="h-28 flex-col justify-between sm:h-14">
+            <div>{title}</div>
+            <div className="flex-row gap-5 sm:flex">
+              <div className="flex">
+                <UserIcon className="w-5"></UserIcon>&nbsp;{info}{" "}
+              </div>
+              <div className="flex">
+                <CalendarIcon className="w-5"></CalendarIcon>&nbsp;{periode}
+              </div>
+              <div className="flex">
+                <MapPinIcon className="w-5"></MapPinIcon>&nbsp;{location}
+              </div>
             </div>
           </div>
+          <div className="h-16 w-16 rounded-xl bg-white p-1">{logo}</div>
         </div>
 
         {/* all info */}

@@ -1,4 +1,6 @@
 import Experience_detail from "./Experience_detail";
+import logo_ukm from "@/assets/Logo-UKM.svg";
+import logo_pfg from "@/assets/Logo-PFG.svg";
 
 const data_experince = [
   {
@@ -80,6 +82,7 @@ const data_experince = [
         link: "",
       },
     ],
+    logo: <img src={logo_ukm} alt="logo UKM" />,
   },
   {
     title: "PT PERDANA FRESTA GARMENT",
@@ -118,6 +121,7 @@ const data_experince = [
         link: "",
       },
     ],
+    logo: <img src={logo_pfg} alt="logo UKM" />,
   },
 ];
 
@@ -130,6 +134,7 @@ const Sub_Experience = data_experince.map((data, index) => {
       location={data.location}
       info={data.info}
       detail={data.detail}
+      logo={data.logo}
     ></Experience_detail>
   );
 });
