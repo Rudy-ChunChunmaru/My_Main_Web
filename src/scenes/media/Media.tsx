@@ -53,12 +53,12 @@ const data_media = [
 
 const data_cv = [
   {
-    title: "CV EN",
-    link: "https://1drv.ms/b/c/fc81b40dbee5501b/EQnIHXLuV95CnXm6D7Cr1OIBgpqf3kFzBWFZ2jbSnaXEmg?e=vIDEPW",
+    title: "CV Ing",
+    link: "https://drive.google.com/file/d/1QJy1XS1alxVPbm4jQGWl8aCg5gAW3nvj/view",
   },
   {
-    title: "CV INDO",
-    link: "https://1drv.ms/b/c/fc81b40dbee5501b/ERKMnvuDwI9LjyK6LJZSwbcBrByQ9LlcW_QLg70hLHqWJQ?e=aJt7j2",
+    title: "CV Indo",
+    link: "https://drive.google.com/file/d/1PHvG86RzIDZbaaNtlwu-kLusJAtYY6q7/view?usp=sharing",
   },
 ];
 

@@ -120,6 +120,12 @@ const data_experince = [
         info: "TypeScript for front React and nestjs",
         link: "",
       },
+      {
+        time: 2024,
+        doing: "Project",
+        info: "This Website: Make my own web site about my profile using React TypeScript",
+        link: "",
+      },
     ],
     logo: <img src={logo_pfg} alt="logo UKM" />,
   },

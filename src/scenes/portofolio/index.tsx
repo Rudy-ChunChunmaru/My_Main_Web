@@ -1,5 +1,6 @@
 import { TypeSelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
+import Program from "./Program";
 
 type Props = {
   setSelectedPage: (value: TypeSelectedPage) => void;
@@ -16,7 +17,9 @@ const Portofolio = ({ setSelectedPage }: Props) => {
         <div className="mb-2 w-full rounded-md bg-slate-300 py-5 text-center">
           <strong>MY PORTOFOLIO</strong>
         </div>
-        <div className="mb-2 flex rounded-md bg-slate-300">&nbsp;</div>
+        <div className="mb-2 flex rounded-md bg-slate-300 p-5">
+          <Program></Program>
+        </div>
       </div>
     </motion.div>
   );
