@@ -51,7 +51,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
     <nav>
       {!isMeanuToggled && (
         <motion.div
-          className="z-100 fixed top-0 h-screen w-full"
+          className="fixed top-0 z-[99] h-screen w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
