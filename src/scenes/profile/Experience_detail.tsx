@@ -59,7 +59,7 @@ const Experience_detail = ({
     >
       <div className="h-28 sm:h-14">
         <button
-          className="relative z-0 h-full rounded-md border-2 align-top hover:bg-gray-500"
+          className="relative z-[20] h-full rounded-md border-2 align-top hover:bg-gray-500"
           onClick={() => setdataExpan(!dataExpan)}
         >
           {!dataExpan && <ArrowDownIcon className="w-6"></ArrowDownIcon>}

@@ -96,7 +96,7 @@ const ContactForm = () => {
           {sendstatus && (
             <input
               type="text"
-              className="relative z-0 w-full rounded-lg px-2 py-1"
+              className="relative z-[20] w-full rounded-lg px-2 py-1"
               placeholder="Name"
               {...register("from_name", {
                 required: true,
@@ -109,7 +109,7 @@ const ContactForm = () => {
               readOnly
               disabled
               type="text"
-              className="relative z-0 w-full rounded-lg px-2 py-1"
+              className="relative z-[20] w-full rounded-lg px-2 py-1"
               placeholder="Name"
               {...register("from_name", {
                 required: true,
@@ -129,7 +129,7 @@ const ContactForm = () => {
           {sendstatus && (
             <input
               type="text"
-              className="relative z-0 w-full rounded-lg px-2 py-1"
+              className="relative z-[20] w-full rounded-lg px-2 py-1"
               placeholder="Email"
               {...register("from_email", {
                 required: true,
@@ -143,7 +143,7 @@ const ContactForm = () => {
               readOnly
               disabled
               type="text"
-              className="relative z-0 w-full rounded-lg px-2 py-1"
+              className="relative z-[20] w-full rounded-lg px-2 py-1"
               placeholder="Email"
               {...register("from_email", {
                 required: true,
@@ -166,7 +166,7 @@ const ContactForm = () => {
         <div className="w-full rounded-lg border-2 border-black">
           {sendstatus && (
             <textarea
-              className="relative z-0 h-24 w-full rounded-lg px-2 py-1"
+              className="relative z-[20] h-24 w-full rounded-lg px-2 py-1"
               placeholder="Message"
               {...register("from_message", {
                 required: true,
@@ -178,7 +178,7 @@ const ContactForm = () => {
             <textarea
               readOnly
               disabled
-              className="relative z-0 h-24 w-full rounded-lg px-2 py-1"
+              className="relative z-[20] h-24 w-full rounded-lg px-2 py-1"
               placeholder="Message"
               {...register("from_message", {
                 required: true,
@@ -199,7 +199,7 @@ const ContactForm = () => {
               <input
                 type="submit"
                 value="Form Submit"
-                className="relative z-0 rounded-lg border-2 border-slate-900 p-2 hover:border-slate-600 hover:bg-slate-400"
+                className="relative z-[20] rounded-lg border-2 border-slate-900 p-2 hover:border-slate-600 hover:bg-slate-400"
               />
             </strong>
           )}
@@ -223,7 +223,7 @@ const ContactForm = () => {
                       setValue("from_message", "");
                     }}
                     value="do u want send again ?"
-                    className="relative z-0 rounded-lg border-2 border-slate-900 p-2 hover:border-slate-600 hover:bg-slate-400"
+                    className="relative z-[20] rounded-lg border-2 border-slate-900 p-2 hover:border-slate-600 hover:bg-slate-400"
                   />
                 </strong>
               </div>

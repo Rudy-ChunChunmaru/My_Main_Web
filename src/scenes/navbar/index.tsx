@@ -51,7 +51,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
     <nav>
       {!isMeanuToggled && (
         <motion.div
-          className="fixed top-0 z-[99] h-screen w-full"
+          className="fixed top-0 z-[20] h-screen w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
@@ -74,41 +74,55 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
       {/* MENU */}
       {isMeanuToggled && (
-        <motion.div
-          className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-white"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.7 }}
-          variants={{
-            hidden: { opacity: 0.75, x: 150 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          {/* Close ICON */}
-          <div className="flex justify-end p-10">
-            <button
-              className="rounded-lg border-2 border-gray-400 text-gray-400 transition duration-500 hover:border-gray-600 hover:text-gray-600"
-              onClick={() => setIsMenuToggled(!isMeanuToggled)}
-            >
-              <XMarkIcon className="h-6 w-6 fill-current "></XMarkIcon>
-            </button>
-          </div>
+        <div className="fixed z-[49] h-screen w-screen">
+          <motion.div
+            className="fixed top-0 z-[49] h-screen w-screen bg-black opacity-80"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 0.8 },
+            }}
+            onClick={() => setIsMenuToggled(!isMeanuToggled)}
+          ></motion.div>
+          <motion.div
+            className="fixed bottom-0 right-0 z-[50] h-full w-[300px] bg-white"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              hidden: { opacity: 0.75, x: 150 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            {/* Close ICON */}
+            <div className="flex justify-end p-10">
+              <button
+                className="rounded-lg border-2 border-gray-400 text-gray-400 transition duration-500 hover:border-gray-600 hover:text-gray-600"
+                onClick={() => setIsMenuToggled(!isMeanuToggled)}
+              >
+                <XMarkIcon className="h-6 w-6 fill-current "></XMarkIcon>
+              </button>
+            </div>
 
-          {/* MENU */}
-          <div className={`ml-[20%] flex flex-col gap-2 text-2xl`}>
-            {data_nav_bar.map((data: datanavbartype) => {
-              return (
-                <Link
-                  page={data.title}
-                  logo={data.logo}
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-              );
-            })}
-          </div>
-        </motion.div>
+            {/* MENU */}
+            <div className={`ml-[20%] flex flex-col gap-2 text-2xl`}>
+              {data_nav_bar.map((data: datanavbartype) => {
+                return (
+                  <Link
+                    page={data.title}
+                    logo={data.logo}
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
       )}
     </nav>
   );

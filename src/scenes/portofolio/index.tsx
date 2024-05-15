@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Portofolio = ({ setSelectedPage }: Props) => {
-  const [LookToDetail, IsLookToDetail] = useState<boolean>(true);
+  const [LookToDetail, IsLookToDetail] = useState<boolean>(false);
   // const [LookToDetailJSX, SetLookToDetailJSX] = useState<JSX.Element>(
   //   <div>a</div>
   // );
@@ -19,7 +19,7 @@ const Portofolio = ({ setSelectedPage }: Props) => {
     <div>
       <motion.div
         id="portofolio"
-        className="z-40 h-fit w-full bg-slate-800 px-3 py-5 text-black"
+        className="h-fit w-full bg-slate-800 px-3 py-5 text-black"
         onViewportEnter={() => setSelectedPage(TypeSelectedPage.Portofolio)}
       >
         <div className="mx-auto ml-3 w-11/12 flex-row">
