@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
-type Props = { detail: detailtype[] };
-type detailtype = {
-  time: number;
-  doing: string;
-  info: string;
-  link: string;
-};
+import { dataExperinceDetailType } from "@/shared/data_profile";
+type Props = { detail: dataExperinceDetailType[] };
 
 const Experience_detail_expan_no = ({ detail }: Props) => {
   const classnamediv = function (doing: string): string {

@@ -10,12 +10,7 @@ import {
 
 import Experience_detail_expan_no from "./Experience_detail_expan_no";
 
-type detailtype = {
-  time: number;
-  doing: string;
-  info: string;
-  link: string;
-};
+import { dataExperinceDetailType } from "@/shared/data_profile";
 
 type Props = {
   times: number;
@@ -23,8 +18,8 @@ type Props = {
   info: string;
   periode: string;
   location: string;
-  detail: detailtype[];
-  logo: JSX.Element;
+  detail: dataExperinceDetailType[];
+  logo: string;
 };
 
 const Experience_detail = ({
@@ -84,7 +79,9 @@ const Experience_detail = ({
               </div>
             </div>
           </div>
-          <div className="h-16 w-16 rounded-xl bg-white p-1">{logo}</div>
+          <div className="h-16 w-16 rounded-xl bg-white p-1">
+            <img src={logo} alt={logo} />
+          </div>
         </div>
 
         {/* all info */}
@@ -93,7 +90,7 @@ const Experience_detail = ({
             <div className="mr-3 w-2 rounded-xl bg-yellow-400">&nbsp;</div>
 
             <div className="w-full flex-col justify-start">
-              {detail.map((datadetail: detailtype, index) => {
+              {detail.map((datadetail: dataExperinceDetailType, index) => {
                 return (
                   <motion.div
                     className={

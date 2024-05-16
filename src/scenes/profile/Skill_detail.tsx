@@ -1,15 +1,11 @@
 import Skill_detail_point from "./Skill_detail_point";
 import { motion } from "framer-motion";
-
-type setskilltype = {
-  title: string;
-  point: number;
-};
+import { dataSkillSetSkillType } from "@/shared/data_profile";
 
 type Props = {
   times: number;
   kategori: string;
-  setskill: setskilltype[];
+  setskill: dataSkillSetSkillType[];
 };
 
 const Skill_detail = ({ times, kategori, setskill }: Props) => {
@@ -27,7 +23,7 @@ const Skill_detail = ({ times, kategori, setskill }: Props) => {
     >
       <div className="rounded-sm bg-slate-300 p-1 text-black">{kategori}</div>
       <div className="flex-row px-1">
-        {setskill.map((data: setskilltype, index) => {
+        {setskill.map((data: dataSkillSetSkillType, index) => {
           return (
             <motion.div
               className="-ml-2 rounded-lg border-l-2 border-t-2"
