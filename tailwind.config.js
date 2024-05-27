@@ -15,6 +15,9 @@ module.exports = {
         profile: "url('./assets/profile.jpg')",
       },
     },
+    variants: {
+      extend: {},
+    },
     screens: {
       xs: "480px",
       sm: "768px",
