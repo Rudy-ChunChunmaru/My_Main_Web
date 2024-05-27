@@ -72,7 +72,7 @@ const Media = () => {
             (data: { title: string; link: string; logo: JSX.Element }) => {
               return (
                 <button
-                  className="z-0 flex w-full rounded-md border-2 hover:bg-gray-500"
+                  className="z-[20] flex w-full rounded-md border-2 hover:bg-gray-500"
                   onClick={() => window.open(data.link, "_blank")}
                 >
                   <div className="hidden h-full w-2/12 bg-slate-300 sm:block">

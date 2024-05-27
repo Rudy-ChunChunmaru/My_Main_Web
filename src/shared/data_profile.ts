@@ -166,7 +166,7 @@ export const data_skill: dataSkillType[] = [
       { title: "C++", point: 6 },
       { title: "C", point: 3 },
       { title: "php", point: 6 },
-      { title: "python", point: 7 },
+      { title: "python", point: 6 },
       { title: "HTML", point: 9 },
       { title: "Javasciprt", point: 6 },
       { title: "TypeScript", point: 6 },
@@ -178,7 +178,7 @@ export const data_skill: dataSkillType[] = [
     setskill: [
       { title: "ardunio and Esp", point: 6 },
       { title: "codeigniter", point: 6 },
-      { title: "Django and Rest Framework", point: 7 },
+      { title: "Django and Rest Framework", point: 5 },
       { title: "Nestjs", point: 4 },
       { title: "Reactjs", point: 5 },
     ],
