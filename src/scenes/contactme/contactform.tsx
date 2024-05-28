@@ -93,7 +93,7 @@ const ContactForm = () => {
       >
         {/* --------------------------------------------------------------------------name */}
         <div className="w-full rounded-lg border-2 border-black">
-          {sendstatus && (
+          {sendstatus ? (
             <input
               type="text"
               className="relative z-[20] w-full rounded-lg px-2 py-1"
@@ -103,8 +103,7 @@ const ContactForm = () => {
                 maxLength: 30,
               })}
             />
-          )}
-          {!sendstatus && (
+          ) : (
             <input
               readOnly
               disabled
@@ -126,7 +125,7 @@ const ContactForm = () => {
         </div>
         {/* --------------------------------------------------------------------------email */}
         <div className="w-full rounded-lg border-2 border-black">
-          {sendstatus && (
+          {sendstatus ? (
             <input
               type="text"
               className="relative z-[20] w-full rounded-lg px-2 py-1"
@@ -137,8 +136,7 @@ const ContactForm = () => {
                 maxLength: 30,
               })}
             />
-          )}
-          {!sendstatus && (
+          ) : (
             <input
               readOnly
               disabled
@@ -164,7 +162,7 @@ const ContactForm = () => {
         </div>
         {/* --------------------------------------------------------------------------message */}
         <div className="w-full rounded-lg border-2 border-black">
-          {sendstatus && (
+          {sendstatus ? (
             <textarea
               className="relative z-[20] h-24 w-full rounded-lg px-2 py-1"
               placeholder="Message"
@@ -173,8 +171,7 @@ const ContactForm = () => {
                 maxLength: 1000,
               })}
             ></textarea>
-          )}
-          {!sendstatus && (
+          ) : (
             <textarea
               readOnly
               disabled
