@@ -1,7 +1,7 @@
 import { TypeSelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Word_intro from "./word_intro";
-import Profile from "@/assets/profile.png";
+import PhotoProfile from "./photo_profile";
 
 type Props = {
   setSelectedPage: (value: TypeSelectedPage) => void;
@@ -17,16 +17,8 @@ const Home = ({ setSelectedPage }: Props) => {
         <div className="mx-auto flex h-full w-10/12 flex-col gap-1 sm:flex-row">
           <div className="relative top-10 z-0 w-full sm:top-0 sm:w-6/12">
             <div className="group relative mx-auto w-48">
-              <div className="absolute z-[0] m-auto w-full border-8 border-slate-300 bg-transparent pt-1 blur-lg">
-                <img className="" alt="foto profile" src={Profile}></img>
-              </div>
-              <div className="relative z-[10] m-auto w-[90%] rounded-lg border-4 border-slate-300 bg-transparent pt-1 blur-none">
-                <img
-                  className="rounded-lg"
-                  alt="foto profile"
-                  src={Profile}
-                ></img>
-              </div>
+              {/* photo profile  */}
+              <PhotoProfile />
             </div>
           </div>
           <div className="z-10 flex h-full w-full flex-col gap-2 sm:w-5/12">
