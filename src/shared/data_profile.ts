@@ -88,7 +88,7 @@ export const data_experince: dataExperinceType[] = [
       {
         time: 2021,
         doing: "Competition",
-        info: "Programmable Logic Control Competition pada Electro Activities Programmable E-TIME 2021",
+        info: "Programmable Logic Control Competition at Electro Activities Programmable E-TIME 2021",
         link: "",
       },
       {
@@ -131,7 +131,13 @@ export const data_experince: dataExperinceType[] = [
         link: "",
       },
       {
-        time: 2023,
+        time: 2024,
+        doing: "Project",
+        info: "making web app report sell and using textile to make garment",
+        link: "",
+      },
+      {
+        time: 2024,
         doing: "Training",
         info: "TypeScript for front React and nestjs",
         link: "",
@@ -140,6 +146,12 @@ export const data_experince: dataExperinceType[] = [
         time: 2024,
         doing: "Project",
         info: "This Website: Make my own web site about my profile using React TypeScript",
+        link: "",
+      },
+      {
+        time: 2024,
+        doing: "Training",
+        info: "Web Front end using redux react",
         link: "",
       },
     ],
