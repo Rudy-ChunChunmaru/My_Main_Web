@@ -154,6 +154,18 @@ export const data_experince: dataExperinceType[] = [
         info: "Web Front end using redux react",
         link: "",
       },
+      {
+        time: 2024,
+        doing: "Training",
+        info: "Learn Docker Works and build image docker",
+        link: "",
+      },
+      {
+        time: 2024,
+        doing: "Project",
+        info: "Making Web App For my own",
+        link: "",
+      },
     ],
     logo: logo_pfg,
   },
