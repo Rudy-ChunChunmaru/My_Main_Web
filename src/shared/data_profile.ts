@@ -157,13 +157,13 @@ export const data_experince: dataExperinceType[] = [
       {
         time: 2024,
         doing: "Training",
-        info: "Learn Docker Works and build image docker",
+        info: "Learn docker works, build image docker and deploy the image into docker ",
         link: "",
       },
       {
         time: 2024,
         doing: "Project",
-        info: "Making Web App For my own",
+        info: "Making web app For my own using django for backend and forntend using react app",
         link: "",
       },
     ],

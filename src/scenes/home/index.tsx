@@ -48,7 +48,7 @@ const Home = ({ setSelectedPage }: Props) => {
             >
               <Word_intro />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className=" bg-gray-400 text-center"
               initial="hidden"
               whileInView="visible"
@@ -62,7 +62,7 @@ const Home = ({ setSelectedPage }: Props) => {
               This Web Still Under Development !!!
               <br></br>
               Thx For Visiting This Web
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
 
