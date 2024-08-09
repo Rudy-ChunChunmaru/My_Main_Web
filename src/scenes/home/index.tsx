@@ -65,9 +65,9 @@ const Home = ({ setSelectedPage }: Props) => {
             </motion.div> */}
           </div>
         </div>
-
+        <br></br>
         <motion.div
-          className="mx-auto flex w-9/12 flex-col justify-center rounded-md border-2 border-indigo-300 p-5 sm:w-6/12"
+          className="mx-auto flex w-10/12 flex-col justify-center rounded-md border-2 border-indigo-300 p-5 sm:w-6/12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
@@ -93,7 +93,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </h2>
           </motion.div>
           <motion.div
-            className="mx-auto  py-3 "
+            className="mx-auto py-3 "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
@@ -106,9 +106,9 @@ const Home = ({ setSelectedPage }: Props) => {
             <p className="font-Montserrat text-sm">
               Hello Guys !!! <br></br>
               &nbsp;&nbsp;&nbsp; My name is Rudy. Im from Sanggau, West Borneo -
-              Indonesia and now I live on west java. I worked as a Full Stack
-              Web Developer creating web ERP and studied IoT several times,
-              studied a little data analysis, robotics and networking.
+              Indonesia and now I live on west java. I worked as a full stack
+              web developer application and studied IoT several times, studied a
+              little data analysis, robotics and networking.
               <br></br>
               &nbsp;&nbsp;&nbsp; I really like programming and mechanics,
               control systems. Sometimes learning it makes your head hurt, but
