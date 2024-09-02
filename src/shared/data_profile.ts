@@ -21,7 +21,7 @@ export type dataExperinceDetailType = {
 export const data_experince: dataExperinceType[] = [
   {
     title: "Universitas Kristen Maranatha",
-    periode: "2018 - 2022",
+    periode: "Aug 2018 - Jul 2022",
     location: "Bandung",
     info: "Electrical Engineer S1",
     detail: [
@@ -102,7 +102,7 @@ export const data_experince: dataExperinceType[] = [
   },
   {
     title: "PT PERDANA FRESTA GARMENT",
-    periode: "2023 - now",
+    periode: "Feb 2023 - Sep 2024",
     location: "Padalalarang",
     info: "Full Stack Web Developer",
     detail: [
@@ -164,6 +164,12 @@ export const data_experince: dataExperinceType[] = [
         time: 2024,
         doing: "Project",
         info: "Making web app For my own using django for backend and forntend using react app",
+        link: "",
+      },
+      {
+        time: 2024,
+        doing: "Training",
+        info: "Learn basic about MQTT IOT",
         link: "",
       },
     ],
