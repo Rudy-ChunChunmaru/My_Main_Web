@@ -172,6 +172,12 @@ export const data_experince: dataExperinceType[] = [
         info: "Learn basic about MQTT IOT",
         link: "",
       },
+      {
+        time: 2024,
+        doing: "Project",
+        info: "Deployment server local to public internet using tunnel cloundflare",
+        link: "",
+      },
     ],
     logo: logo_pfg,
   },
