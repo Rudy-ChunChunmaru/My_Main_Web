@@ -1,6 +1,7 @@
 // --------------------------------------------------------------------------------------------------- Experince
 import logo_ukm from "@/assets/Logo-UKM.svg";
 import logo_pfg from "@/assets/Logo-PFG.svg";
+import logo_ykkap from "@/assets/Logo-YKKAP.svg";
 
 export type dataExperinceType = {
   title: string;
@@ -22,7 +23,7 @@ export const data_experince: dataExperinceType[] = [
   {
     title: "Universitas Kristen Maranatha",
     periode: "Aug 2018 - Jul 2022",
-    location: "Bandung",
+    location: "Bandung - Indonesia",
     info: "Electrical Engineer S1",
     detail: [
       {
@@ -103,7 +104,7 @@ export const data_experince: dataExperinceType[] = [
   {
     title: "PT PERDANA FRESTA GARMENT",
     periode: "Feb 2023 - Sep 2024",
-    location: "Padalalarang",
+    location: "Padalalarang - Indonesia",
     info: "Full Stack Web Developer",
     detail: [
       {
@@ -180,6 +181,21 @@ export const data_experince: dataExperinceType[] = [
       },
     ],
     logo: logo_pfg,
+  },
+  {
+    title: "PT YKK AP INDONESIA",
+    periode: "Sep 2024",
+    location: "Tangerang - Indonesia",
+    info: "IT System Developer",
+    detail: [
+      {
+        time: 2024,
+        doing: "-",
+        info: "-",
+        link: "",
+      },
+    ],
+    logo: logo_ykkap,
   },
 ];
 
