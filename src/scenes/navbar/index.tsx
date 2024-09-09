@@ -7,7 +7,6 @@ import {
   UserCircleIcon,
   DocumentTextIcon,
   UserIcon,
-  EnvelopeIcon,
 } from "@heroicons/react/24/solid";
 import Link from "./link";
 
@@ -37,10 +36,6 @@ const data_nav_bar: datanavbartype[] = [
   {
     title: "Media",
     logo: <UserIcon className="fill-current"></UserIcon>,
-  },
-  {
-    title: "ContactMe",
-    logo: <EnvelopeIcon className="fill-current"></EnvelopeIcon>,
   },
 ];
 

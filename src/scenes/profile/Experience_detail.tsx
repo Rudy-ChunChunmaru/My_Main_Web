@@ -53,19 +53,19 @@ const Experience_detail = ({
       }}
     >
       <div className="h-28 sm:h-14">
-        <button
-          className="relative z-[20] h-full rounded-md border-2 align-top hover:bg-gray-500"
+        <div
+          className="relative z-[20] flex h-full justify-center rounded-md border-2 align-top hover:bg-gray-500"
           onClick={() => setdataExpan(!dataExpan)}
         >
           {!dataExpan && <ArrowDownIcon className="w-6"></ArrowDownIcon>}
           {dataExpan && <ArrowUpIcon className="w-6"></ArrowUpIcon>}
-        </button>
+        </div>
       </div>
 
-      <div className="w-full flex-row pl-3 ">
+      <div className="w-full flex-row pl-3">
         {/* Head info */}
         <div className="flex justify-between">
-          <div className="h-28 flex-col justify-between sm:h-14">
+          <div className="my-auto h-28 flex-col justify-between sm:h-14">
             <div>{title}</div>
             <div className="flex-row gap-5 sm:flex">
               <div className="flex">
@@ -79,8 +79,12 @@ const Experience_detail = ({
               </div>
             </div>
           </div>
-          <div className="h-16 w-16 rounded-xl bg-white p-1">
-            <img src={logo} alt={logo} />
+          <div className="z-[20] h-16 w-16 rounded-xl bg-white p-2 duration-200 hover:h-24 hover:w-24">
+            <img
+              className="mx-auto my-auto h-[100%] w-[100%]"
+              src={logo}
+              alt={logo}
+            />
           </div>
         </div>
 

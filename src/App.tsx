@@ -25,8 +25,6 @@ function App() {
 
       <Media setSelectedPage={setSelectedPage} />
 
-      <ContactMe setSelectedPage={setSelectedPage} />
-
       <Bottom />
     </div>
   );
