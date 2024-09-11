@@ -4,7 +4,7 @@ import Profile from "@/scenes/profile";
 import Portofolio from "@/scenes/portofolio";
 import Media from "@/scenes/media";
 import Bottom from "@/scenes/bottom";
-import ContactMe from "@/scenes/contactme";
+// import ContactMe from "@/scenes/contactme";
 import { useState } from "react";
 import { TypeSelectedPage } from "@/shared/types";
 
