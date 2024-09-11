@@ -3,4 +3,5 @@ export enum TypeSelectedPage {
   Profile = "profile",
   Portofolio = "portofolio",
   Media = "media",
+  ContactMe = "contactme",
 }
