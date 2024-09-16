@@ -241,7 +241,8 @@ export const data_skill: dataSkillType[] = [
     setskill: [
       { title: "Eagle", point: 6 },
       { title: "Fusion 360", point: 6 },
-      { title: "VS Code", point: 7 },
+      { title: "Visual Studio Code", point: 7 },
+      { title: "Docker", point: 3 },
     ],
   },
 ];
