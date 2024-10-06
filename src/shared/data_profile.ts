@@ -186,12 +186,12 @@ export const data_experince: dataExperinceType[] = [
     title: "PT YKK AP INDONESIA",
     periode: "Sep 2024",
     location: "Tangerang - Indonesia",
-    info: "IT System Development",
+    info: "IT System Analyst",
     detail: [
       {
         time: 2024,
-        doing: "-",
-        info: "-",
+        doing: "Project",
+        info: "Analyst data database build of material item and data injection data",
         link: "",
       },
     ],
