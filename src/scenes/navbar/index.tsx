@@ -112,6 +112,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                     logo={data.logo}
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
+                    setIsMenuToggled={setIsMenuToggled}
                   />
                 );
               })}

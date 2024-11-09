@@ -12,7 +12,7 @@ const PhotoProfile = () => {
 
   if (image != undefined) {
     return (
-      <div className="group relative mx-auto w-48">
+      <div className="group relative mx-auto w-48 l:w-60 xxl:w-64">
         <div className="absolute z-[0] m-auto w-full border-8 border-slate-300 bg-transparent pt-1 blur-lg">
           <img className="" alt="foto profile" src={Profile}></img>
         </div>
@@ -23,7 +23,7 @@ const PhotoProfile = () => {
     );
   }
   return (
-    <div className="group relative mx-auto w-48">
+    <div className="group relative mx-auto w-48 l:w-60 xxl:w-64">
       <RiseLoader color="hsla(180, 3%, 19%, 1)" speedMultiplier={1} />
     </div>
   );

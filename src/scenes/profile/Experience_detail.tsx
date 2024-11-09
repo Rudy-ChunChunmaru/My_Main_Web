@@ -80,7 +80,7 @@ const Experience_detail = ({
               </div>
             </div>
           </div>
-          <div className="z-[20] w-20 rounded-xl bg-white p-2 duration-200 md:hover:w-28 xl:w-28 xl:hover:w-32">
+          <div className="z-[20] w-16 rounded-xl bg-white p-2 duration-200 md:w-20 md:hover:w-28 xl:w-28 xl:hover:w-32">
             <img
               className="mx-auto my-auto h-[100%] w-[100%]"
               src={logo}

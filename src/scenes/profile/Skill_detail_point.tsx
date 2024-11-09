@@ -13,7 +13,7 @@ const Skill_detail_point = ({ point, durasi }: Props) => {
         for (let i = 0; i < point; i++) {
           bardiv.push(
             <motion.div
-              className="m-1 h-2 w-5 rounded-sm bg-slate-500"
+              className="m-1 h-2 w-5 rounded-sm bg-slate-500 xl:w-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -35,7 +35,7 @@ const Skill_detail_point = ({ point, durasi }: Props) => {
         for (let i = 0; i < 10 - point; i++) {
           bardiv.push(
             <motion.div
-              className="m-1 h-2 w-5 rounded-sm border-2 border-slate-500"
+              className="m-1 h-2 w-5 rounded-sm border-2 border-slate-500 xl:w-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

@@ -6,9 +6,16 @@ type Props = {
   logo: JSX.Element;
   selectedPage: TypeSelectedPage;
   setSelectedPage: (value: TypeSelectedPage) => void;
+  setIsMenuToggled: (value: Boolean) => void;
 };
 
-const Link = ({ page, logo, selectedPage, setSelectedPage }: Props) => {
+const Link = ({
+  page,
+  logo,
+  selectedPage,
+  setSelectedPage,
+  setIsMenuToggled,
+}: Props) => {
   const lowerCasePage = page
     .toLocaleLowerCase()
     .replace(/ /g, "") as TypeSelectedPage;
@@ -19,7 +26,10 @@ const Link = ({ page, logo, selectedPage, setSelectedPage }: Props) => {
         selectedPage === lowerCasePage ? "border-gray-600 text-gray-400" : ""
       } mr-5 rounded-xl border-2 border-white py-1 pl-3 text-black filter transition duration-500 hover:border-gray-600 hover:text-gray-600`}
       href={`#${lowerCasePage}`}
-      onClick={() => setSelectedPage(lowerCasePage)}
+      onClick={() => {
+        setSelectedPage(lowerCasePage);
+        setIsMenuToggled(false);
+      }}
     >
       <div className="flex">
         <div
