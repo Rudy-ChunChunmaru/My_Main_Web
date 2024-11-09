@@ -155,7 +155,7 @@ const Bottom = () => {
       >
         <div className="flex-row justify-start gap-1 pr-11 sm:flex">
           <div className="h-fit w-full rounded-br-3xl border-2 border-slate-300  pl-2 pr-5 sm:w-fit">
-            <strong>Made By @ Rudy - ChunChunMaru</strong>
+            <strong>ChunChunMaru©Copyright</strong>
           </div>
           <div className="h-fit w-full flex-row px-4 py-1 sm:w-fit">
             <div className="w-11/12 sm:w-fit">

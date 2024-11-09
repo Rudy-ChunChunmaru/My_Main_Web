@@ -42,7 +42,7 @@ const Experience_detail = ({
 
   return (
     <motion.div
-      className="mt-3 flex rounded-md border-2 border-indigo-300 p-1"
+      className="relative mt-3 flex rounded-md border-2 border-indigo-300 p-1"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -57,12 +57,12 @@ const Experience_detail = ({
           className="relative z-[20] flex h-full justify-center rounded-md border-2 align-top hover:bg-gray-500"
           onClick={() => setdataExpan(!dataExpan)}
         >
-          {!dataExpan && <ArrowDownIcon className="w-6"></ArrowDownIcon>}
-          {dataExpan && <ArrowUpIcon className="w-6"></ArrowUpIcon>}
+          {!dataExpan && <ArrowDownIcon className="w-6" />}
+          {dataExpan && <ArrowUpIcon className="w-6" />}
         </div>
       </div>
 
-      <div className="w-full flex-row pl-3">
+      <div className="h-fit w-full flex-row justify-between pl-3">
         {/* Head info */}
         <div className="flex justify-between">
           <div className="my-auto h-28 flex-col justify-between sm:h-14">
@@ -79,7 +79,7 @@ const Experience_detail = ({
               </div>
             </div>
           </div>
-          <div className="z-[20] h-16 w-16 rounded-xl bg-white p-2 duration-200 hover:h-24 hover:w-24">
+          <div className="z-[20] h-16 w-16 rounded-xl bg-white p-2 duration-200 sm:hover:h-24 sm:hover:w-24">
             <img
               className="mx-auto my-auto h-[100%] w-[100%]"
               src={logo}
@@ -92,7 +92,6 @@ const Experience_detail = ({
         {dataExpan && (
           <div className="flex">
             <div className="mr-3 w-2 rounded-xl bg-yellow-400">&nbsp;</div>
-
             <div className="w-full flex-col justify-start">
               {detail.map((datadetail: dataExperinceDetailType, index) => {
                 return (
@@ -125,11 +124,7 @@ const Experience_detail = ({
         )}
 
         {/* just one info */}
-        {!dataExpan && (
-          <Experience_detail_expan_no
-            detail={detail}
-          ></Experience_detail_expan_no>
-        )}
+        {!dataExpan && <Experience_detail_expan_no detail={detail} />}
       </div>
     </motion.div>
   );

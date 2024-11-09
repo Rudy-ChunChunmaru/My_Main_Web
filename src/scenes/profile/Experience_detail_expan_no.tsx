@@ -28,31 +28,29 @@ const Experience_detail_expan_no = ({ detail }: Props) => {
   }, []);
 
   return (
-    <div>
-      <motion.div
-        className="flex w-full rounded-md bg-slate-300 p-1 text-black"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0.25, y: -20 },
-          visible: { opacity: 1, y: 0 },
-        }}
+    <motion.div
+      className="flex w-full rounded-md bg-slate-300 p-1 text-black"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0.25, y: -20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
+      <div
+        className={
+          "hidden w-[15%] rounded-md px-1 text-center text-white sm:block" +
+          classnamediv(datadetail.doing)
+        }
       >
-        <div
-          className={
-            "hidden w-[15%] rounded-md px-1 text-center text-white sm:block " +
-            classnamediv(datadetail.doing)
-          }
-        >
-          {datadetail.time} - {datadetail.doing}
-        </div>
-        <div className="flex w-full justify-between">
-          <div className="pl-2">{datadetail.info}</div>
-        </div>
-      </motion.div>
-    </div>
+        {datadetail.time} - {datadetail.doing}
+      </div>
+      <div className="flex w-full justify-between">
+        <div className="pl-2">{datadetail.info}</div>
+      </div>
+    </motion.div>
   );
 };
 
