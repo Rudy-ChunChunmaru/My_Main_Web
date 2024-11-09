@@ -28,10 +28,10 @@ const Program_detail = ({
   };
 
   return (
-    <div className="flex  flex-row justify-between md:w-[40%] md:p-1">
+    <div className="flex  flex-row justify-between l:w-[40%] l:p-1">
       <div className="h-72 w-[5%]">
         <button
-          className="relative z-[20] my-auto h-full w-full rounded-full border-2 border-gray-800 hover:bg-slate-500 md:top-[35%] md:h-[40%]"
+          className="relative z-[20] my-auto h-full w-full rounded-full border-2 border-gray-800 hover:bg-slate-500 l:top-[35%] l:h-[40%]"
           onClick={leftphotodetail}
         >
           <ArrowLongLeftIcon></ArrowLongLeftIcon>
@@ -44,7 +44,7 @@ const Program_detail = ({
           SetLookToDetailJSX(
             <div className="fixed top-[15%] z-[100] mx-[10%] h-fit w-[80%] bg-white">
               <img
-                className="mx-auto h-1/5 sm:h-2/5 md:h-[50%]"
+                className="mx-auto h-1/5 sm:h-2/5 l:h-[50%]"
                 src={photodetailimage[photodetail]}
                 alt={`portofolio_image_` + photodetail}
               />
@@ -60,7 +60,7 @@ const Program_detail = ({
       </div>
       <div className="h-72 w-[5%]">
         <button
-          className="relative z-[20] my-auto h-full w-full rounded-full border-2 border-gray-800 hover:bg-slate-500 md:top-[35%] md:h-[40%]"
+          className="relative z-[20] my-auto h-full w-full rounded-full border-2 border-gray-800 hover:bg-slate-500 l:top-[35%] l:h-[40%]"
           onClick={rightphotodetail}
         >
           <ArrowLongRightIcon></ArrowLongRightIcon>

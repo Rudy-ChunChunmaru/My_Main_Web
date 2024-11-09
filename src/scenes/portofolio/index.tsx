@@ -26,7 +26,7 @@ const Portofolio = ({ setSelectedPage }: Props) => {
           <div className="mb-2 w-full rounded-md bg-slate-300 py-5 text-center">
             <strong>MY PORTOFOLIO</strong>
           </div>
-          <div className="mb-2 flex rounded-md bg-slate-300 p-3 md:p-5">
+          <div className="mb-2 flex rounded-md bg-slate-300 p-3 l:p-5">
             <Program
               IsLookToDetail={IsLookToDetail}
               SetLookToDetailJSX={SetLookToDetailJSX}

@@ -42,7 +42,7 @@ const Experience_detail = ({
 
   return (
     <motion.div
-      className="relative mt-3 flex rounded-md border-2 border-indigo-300 p-1"
+      className="relative mt-3 grid h-auto grid-cols-12 rounded-md border-2 border-indigo-300 p-1"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -52,9 +52,9 @@ const Experience_detail = ({
         visible: { opacity: 1, y: 0 },
       }}
     >
-      <div className="h-28 sm:h-14">
+      <div className="col-span-1 h-full w-full">
         <div
-          className="relative z-[20] flex h-full justify-center rounded-md border-2 align-top hover:bg-gray-500"
+          className="relative z-[20] m-auto flex h-[90%] w-[90%] justify-center rounded-md border-2 align-top hover:bg-gray-500"
           onClick={() => setdataExpan(!dataExpan)}
         >
           {!dataExpan && <ArrowDownIcon className="w-6" />}
@@ -62,14 +62,15 @@ const Experience_detail = ({
         </div>
       </div>
 
-      <div className="h-fit w-full flex-row justify-between pl-3">
+      <div className="relative col-span-11 grid h-fit w-full grid-cols-1 pl-3 ">
         {/* Head info */}
         <div className="flex justify-between">
-          <div className="my-auto h-28 flex-col justify-between sm:h-14">
+          <div className="my-auto  h-fit flex-col justify-between">
             <div>{title}</div>
-            <div className="flex-row gap-5 sm:flex">
+            <div className="flex-row md:flex md:gap-5">
               <div className="flex">
-                <UserIcon className="w-5"></UserIcon>&nbsp;{info}{" "}
+                <UserIcon className="w-5" />
+                &nbsp;{info}{" "}
               </div>
               <div className="flex">
                 <CalendarIcon className="w-5"></CalendarIcon>&nbsp;{periode}
@@ -79,7 +80,7 @@ const Experience_detail = ({
               </div>
             </div>
           </div>
-          <div className="z-[20] h-16 w-16 rounded-xl bg-white p-2 duration-200 sm:hover:h-24 sm:hover:w-24">
+          <div className="z-[20] w-20 rounded-xl bg-white p-2 duration-200 md:hover:w-28 xl:w-28 xl:hover:w-32">
             <img
               className="mx-auto my-auto h-[100%] w-[100%]"
               src={logo}
@@ -87,7 +88,9 @@ const Experience_detail = ({
             />
           </div>
         </div>
+      </div>
 
+      <div className="col-span-12">
         {/* all info */}
         {dataExpan && (
           <div className="flex">
@@ -97,7 +100,7 @@ const Experience_detail = ({
                 return (
                   <motion.div
                     className={
-                      "my-1 flex w-full justify-start rounded-md " +
+                      "my-1 grid w-full grid-cols-12 justify-start rounded-md " +
                       classnamediv(datadetail.doing)
                     }
                     initial="hidden"
@@ -109,13 +112,15 @@ const Experience_detail = ({
                       visible: { opacity: 1, y: 0 },
                     }}
                   >
-                    <div className="hidden w-20  pl-3 md:block">
+                    <div className="hidden pl-3 md:col-span-1 md:block">
                       {datadetail.time}
                     </div>
-                    <div className="hidden w-36 sm:block ">
+                    <div className="hidden xs:col-span-2 xs:block">
                       {datadetail.doing}
                     </div>
-                    <div className="pr-3">{datadetail.info}</div>
+                    <div className="col-span-full xs:col-span-10 md:col-span-9">
+                      {datadetail.info}
+                    </div>
                   </motion.div>
                 );
               })}

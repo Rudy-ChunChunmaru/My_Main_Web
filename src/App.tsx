@@ -13,7 +13,7 @@ function App() {
   );
 
   return (
-    <div className="h-full w-full text-[0.85rem] sm:text-[0.9rem] md:text-[1rem] l:text-[1.3rem]">
+    <div className="h-full w-full text-[0.65rem] sm:text-[0.75rem] md:text-[0.85rem] l:text-[0.95rem] xl:text-[1.2rem] xxl:text-[1.6rem]">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
       <Home setSelectedPage={setSelectedPage} />

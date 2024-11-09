@@ -11,7 +11,7 @@ type Props = {
 const Skill_detail = ({ times, kategori, setskill }: Props) => {
   return (
     <motion.div
-      className="h-fit w-full flex-row rounded-md border-2 border-slate-300 md:w-5/12 "
+      className="h-fit w-full flex-row rounded-md border-2 border-slate-300 l:w-5/12 "
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

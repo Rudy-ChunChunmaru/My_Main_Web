@@ -14,16 +14,16 @@ const Home = ({ setSelectedPage }: Props) => {
         className="z-10 flex w-full flex-col gap-5"
         onViewportEnter={() => setSelectedPage(TypeSelectedPage.Home)}
       >
-        <div className="mx-auto flex h-full w-10/12 flex-col gap-1 sm:flex-row">
-          <div className="relative top-10 z-0 w-full sm:top-0 sm:w-6/12">
+        <div className="mx-auto flex h-full w-10/12 flex-col gap-1 md:flex-row">
+          <div className="relative top-10 z-0 w-full md:top-0 md:w-6/12">
             <div className="group relative mx-auto w-48">
               {/* photo profile  */}
               <PhotoProfile />
             </div>
           </div>
-          <div className="z-10 flex h-full w-full flex-col gap-2 sm:w-5/12">
+          <div className="z-10 flex h-full w-full flex-col gap-2 md:w-5/12">
             <motion.div
-              className="text-center font-Protest_Revolution text-6xl"
+              className="text-center font-Protest_Revolution text-6xl xl:text-[3.9rem]"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
@@ -36,7 +36,7 @@ const Home = ({ setSelectedPage }: Props) => {
               <h1>I AM RUDY</h1>
             </motion.div>
             <motion.div
-              className="text-center font-Protest_Riot text-3xl"
+              className="text-center font-Protest_Riot text-3xl xl:text-[3.2rem]"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
@@ -67,7 +67,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
         <br></br>
         <motion.div
-          className="mx-auto flex w-10/12 flex-col justify-center rounded-md border-2 border-indigo-300 p-5 sm:w-6/12"
+          className="mx-auto flex w-10/12 flex-col justify-center rounded-md border-2 border-indigo-300 p-5 md:w-6/12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
@@ -88,9 +88,7 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <h2 className="text-center font-Protest_Riot text-lg">
-              INTRODUCTION
-            </h2>
+            <p className="text-center font-Protest_Riot">INTRODUCTION</p>
           </motion.div>
           <motion.div
             className="mx-auto py-3 "
@@ -103,7 +101,7 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <p className="font-Montserrat text-sm">
+            <p className="font-Montserrat">
               Hello Guys !!! <br></br>
               &nbsp;&nbsp;&nbsp; My name is Rudy. Im from Sanggau, West Borneo -
               Indonesia and now I live on west java. I worked as a full stack
