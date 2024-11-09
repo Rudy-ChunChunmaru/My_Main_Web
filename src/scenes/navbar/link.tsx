@@ -6,7 +6,7 @@ type Props = {
   logo: JSX.Element;
   selectedPage: TypeSelectedPage;
   setSelectedPage: (value: TypeSelectedPage) => void;
-  setIsMenuToggled: (value: Boolean) => void;
+  setIsMenuToggled: (value: boolean) => void;
 };
 
 const Link = ({
