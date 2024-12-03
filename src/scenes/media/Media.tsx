@@ -54,7 +54,7 @@ const data_media = [
 const data_cv = [
   {
     title: "CV Ing",
-    link: "https://drive.google.com/file/d/1QJy1XS1alxVPbm4jQGWl8aCg5gAW3nvj/view",
+    link: "https://drive.google.com/file/d/1KcXOdlbIrfno4ChKSUNRtLzbPOeQQfVN/view?usp=sharing",
   },
   {
     title: "CV Indo",
