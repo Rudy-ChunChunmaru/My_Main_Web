@@ -30,12 +30,12 @@ const Program_detail = ({
   return (
     <div className="flex  flex-row justify-between l:w-[40%] l:p-1">
       <div className="h-72 w-[5%]">
-        <button
+        <div
           className="relative z-[20] my-auto h-full w-full rounded-full border-2 border-gray-800 hover:bg-slate-500 l:top-[35%] l:h-[40%]"
           onClick={leftphotodetail}
         >
           <ArrowLongLeftIcon></ArrowLongLeftIcon>
-        </button>
+        </div>
       </div>
       <div
         className="relative z-[20] h-72 w-fit"
@@ -59,12 +59,12 @@ const Program_detail = ({
         />
       </div>
       <div className="h-72 w-[5%]">
-        <button
+        <div
           className="relative z-[20] my-auto h-full w-full rounded-full border-2 border-gray-800 hover:bg-slate-500 l:top-[35%] l:h-[40%]"
           onClick={rightphotodetail}
         >
           <ArrowLongRightIcon></ArrowLongRightIcon>
-        </button>
+        </div>
       </div>
     </div>
   );

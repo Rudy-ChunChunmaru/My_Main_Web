@@ -57,12 +57,12 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           }}
         >
           <div className="mx-auto flex h-screen justify-end">
-            <button
+            <div
               className="group items-center border-4 border-white bg-white transition duration-500 hover:border-l-gray-500  hover:bg-slate-300 sm:px-1 l:px-2"
               onClick={() => setIsMenuToggled(!isMeanuToggled)}
             >
               <Bars3Icon className="h-6 w-6 text-black group-hover:sm:mx-2  group-hover:l:mx-4" />
-            </button>
+            </div>
           </div>
         </motion.div>
       )}
@@ -95,12 +95,12 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           >
             {/* Close ICON */}
             <div className="flex justify-end p-10">
-              <button
+              <div
                 className="rounded-lg border-2 border-gray-400 text-gray-400 transition duration-500 hover:border-gray-600 hover:text-gray-600"
                 onClick={() => setIsMenuToggled(!isMeanuToggled)}
               >
                 <XMarkIcon className="h-6 w-6 fill-current "></XMarkIcon>
-              </button>
+              </div>
             </div>
 
             {/* MENU */}
