@@ -8,5 +8,5 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
   },
-  base: "/My_Main_Web/",
+  // base: "/My_Main_Web/",
 });

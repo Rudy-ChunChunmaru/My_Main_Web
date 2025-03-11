@@ -1,7 +1,7 @@
 {
-  "name": "my-web-side",
+  "name": "my-main-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "devdocker": "vite --host 0.0.0.0",
@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
-    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.0.5",
+    "localforage": "^1.10.0",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
+    "react-router-dom": "^7.3.0",
     "react-spinners": "^0.13.8",
     "typewriter-effect": "^2.21.0"
   },
