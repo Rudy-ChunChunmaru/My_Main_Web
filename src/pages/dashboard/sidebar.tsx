@@ -1,5 +1,4 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-import { useRef } from "react";
 
 import {
   Sidebar,
