@@ -7,9 +7,9 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <DashboardSidebar />
-      <main className="pageindex flex flex-col h-full w-full" >
-        <div className="flex w-full bg-gray-500 px-5 py-1 gap-3 opacity-40" >
-          <div className="border-2 rounded-lg border-white">
+      <main className="pageindex relative flex flex-col h-full w-full" >
+        <div className="fixed flex w-full bg-[#ffffff1a] px-5 py-1 gap-3 drop-shadow-md" >
+          <div className="border-2 rounded-lg border-white bg-[#808080]">
             <SidebarTrigger />
           </div>
         </div>

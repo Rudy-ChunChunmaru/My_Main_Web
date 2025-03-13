@@ -1,64 +1,82 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {  Home, UserRound, Newspaper, Waves } from "lucide-react";
 
 import {
   Sidebar,
   SidebarContent,
+  SidebarHeader,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTriggerClose,
 } from "@/components/ui/sidebar"
+
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { motion } from "framer-motion";
 
 // Menu items.
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "#home",
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Profil",
     url: "#",
-    icon: Inbox,
+    icon: UserRound,
   },
   {
-    title: "Calendar",
+    title: "Portofolio",
     url: "#",
-    icon: Calendar,
+    icon: Newspaper,
   },
   {
-    title: "Search",
+    title: "Media",
     url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    icon: Waves,
   },
 ]
 
 export function DashboardSidebar() {
   return (
     <Sidebar>
+      <SidebarHeader key={"Section Head"} >
+        <div className="border-2 rounded-lg border-gray-500 ">
+          <SidebarTriggerClose className="w-full hover:bg-gray-300"/>
+        </div> 
+      </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>
-            <strong>Application</strong>
+        <SidebarGroup key={"Section Menu"}>
+          <SidebarGroupLabel className="text-base py-1 text-back">
+            <strong>Section Menu</strong>
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton>
-                    <a href={item.url} className="flex items-center gap-2">
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
+              {items.map((item,index) => (
+                <AnchorLink href={item.url}>
+                  <SidebarMenuItem key={item.title}>
+                        <motion.div
+                          key={item.title}
+                          initial="hidden"
+                          whileInView="visible"
+                          transition={{ duration: 0.5 + (index * 0.1) }}
+                          variants={{
+                            hidden: { opacity: 1, x: (-150 - (index * 15)) },
+                            visible: { opacity: 1, x: 0 },
+                          }}
+                        >
+                            <SidebarMenuButton variant={"costum"} className="flex items-center gap-2">
+                              
+                                <item.icon />
+                                <span>{item.title}</span>
+                              
+                          </SidebarMenuButton>
+                        </motion.div>
+                  </SidebarMenuItem>
+                  </AnchorLink>
               ))}
             </SidebarMenu>
           </SidebarGroupContent>
