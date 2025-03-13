@@ -39,7 +39,7 @@ export function DashboardSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {menu_items.map((item,index) => (
-                <AnchorLink href={item.url}>
+                <AnchorLink href={item.url} key={index}>
                   <SidebarMenuItem key={item.title}>
                         <motion.div
                           key={item.title}
@@ -51,7 +51,7 @@ export function DashboardSidebar() {
                             visible: { opacity: 1, x: 0 },
                           }}
                         >
-                          <SidebarMenuButton variant={"costum"} className="flex items-center gap-2">
+                          <SidebarMenuButton variant={"costum"} className="flex items-center gap-2" key={index}>
                             <item.icon />
                             <span>{item.title}</span>   
                           </SidebarMenuButton>
@@ -65,21 +65,23 @@ export function DashboardSidebar() {
       </SidebarContent>
       <SidebarFooter>
         <div className="relative flex flex-col justify-between gap-2 w-full">
-          <div className="flex flex-wrap gap-1 w-full bg-gray-300 p-2 rounded-sm">
+          <div className="flex flex-wrap gap-1 w-full bg-gray-300 px-2 py-1 rounded-sm">
             {data_suppot.map((value,index)=>{
               return(
-                <motion.div 
-                  className="w-[23%]"
-                  key={index}
+                <motion.div
+                  className="w-[22%]"
+                  key={value.title}
                   initial="hidden"
                   whileInView="visible"
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                   variants={{
-                    hidden: { opacity: 0.25, y: (90 + (index * 5)) },
+                    hidden: { opacity: 0.20, y: 75 },
                     visible: { opacity: 1, y: 0 },
                   }}
                 >
-                  <Button className="bg-white border-black border-2 rounded-gray-500 hover:bg-gray-300 hover:border-gray-500 w-full"
+                  <Button 
+                    key={index}
+                    className="bg-white border-black border-2 rounded-gray-500 hover:bg-gray-300 hover:border-gray-500 w-full"
                     onClick={(e)=>{
                       e.preventDefault();
                       window.open(value.link, "_blank");
