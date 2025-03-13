@@ -1,4 +1,3 @@
-import {  Home, UserRound, Newspaper, Waves } from "lucide-react";
 
 import {
   Sidebar,
@@ -11,34 +10,17 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarTriggerClose,
+  SidebarFooter,
 } from "@/components/ui/sidebar"
-
+import {
+  Separator,
+} from "@/components/ui/separator";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { menu_items,data_suppot } from "@/pages/dashboard/data";
 
-// Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "#home",
-    icon: Home,
-  },
-  {
-    title: "Profil",
-    url: "#",
-    icon: UserRound,
-  },
-  {
-    title: "Portofolio",
-    url: "#",
-    icon: Newspaper,
-  },
-  {
-    title: "Media",
-    url: "#",
-    icon: Waves,
-  },
-]
+
 
 export function DashboardSidebar() {
   return (
@@ -50,12 +32,13 @@ export function DashboardSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup key={"Section Menu"}>
-          <SidebarGroupLabel className="text-base py-1 text-back">
+          <SidebarGroupLabel className="text-base text-back flex-col flex">
             <strong>Section Menu</strong>
+            <Separator className="bg-gray-500" />
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item,index) => (
+              {menu_items.map((item,index) => (
                 <AnchorLink href={item.url}>
                   <SidebarMenuItem key={item.title}>
                         <motion.div
@@ -68,11 +51,9 @@ export function DashboardSidebar() {
                             visible: { opacity: 1, x: 0 },
                           }}
                         >
-                            <SidebarMenuButton variant={"costum"} className="flex items-center gap-2">
-                              
-                                <item.icon />
-                                <span>{item.title}</span>
-                              
+                          <SidebarMenuButton variant={"costum"} className="flex items-center gap-2">
+                            <item.icon />
+                            <span>{item.title}</span>   
                           </SidebarMenuButton>
                         </motion.div>
                   </SidebarMenuItem>
@@ -82,6 +63,46 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <div className="relative flex flex-col justify-between gap-2 w-full">
+          <div className="flex flex-wrap gap-1 w-full bg-gray-300 p-2 rounded-sm">
+            {data_suppot.map((value,index)=>{
+              return(
+                <motion.div 
+                  className="w-[23%]"
+                  key={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0.25, y: (90 + (index * 5)) },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                >
+                  <Button className="bg-white border-black border-2 rounded-gray-500 hover:bg-gray-300 hover:border-gray-500 w-full"
+                    onClick={(e)=>{
+                      e.preventDefault();
+                      window.open(value.link, "_blank");
+                    }}
+                  >
+                    {value.logo}
+                  </Button>
+                </motion.div>
+              )
+            })}
+
+          </div>
+          <div className="flex justify-between border-b-2 border-gray-500 w-full">
+              <div className="content-start text-xs">
+                A.K.A ChunChunMaru
+              </div>
+              <Separator orientation="vertical" className="bg-gray-500" />
+              <div className="content-end text-xs">
+                rudymuinfo@gmail.com
+              </div>
+          </div>
+        </div>
+      </SidebarFooter>
     </Sidebar>
   )
 }

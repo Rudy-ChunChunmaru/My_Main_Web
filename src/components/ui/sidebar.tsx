@@ -24,8 +24,8 @@ import {
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-const SIDEBAR_WIDTH = "16rem"
-const SIDEBAR_WIDTH_MOBILE = "18rem"
+const SIDEBAR_WIDTH = "18rem"
+const SIDEBAR_WIDTH_MOBILE = "20rem"
 const SIDEBAR_WIDTH_ICON = "3rem"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 
@@ -170,7 +170,7 @@ const Sidebar = React.forwardRef<
   (
     {
       side = "left",
-      variant = "sidebar",
+      variant = "inset",
       collapsible = "offcanvas",
       className,
       children,
@@ -454,7 +454,7 @@ const SidebarGroup = React.forwardRef<
     <div
       ref={ref}
       data-sidebar="group"
-      className={cn("relative flex w-full min-w-0 flex-col p-2", className)}
+      className={cn("relative flex w-full min-w-0 flex-col p-2 gap-2", className)}
       {...props}
     />
   )
@@ -553,7 +553,7 @@ const sidebarMenuButtonVariants = cva(
         link: "hover:text-sidebar",
         active: "bg-sidebar-accent text-sidebar-accent-foreground",
         disabled: "pointer-events-none opacity-50",
-        costum:"bg-background shadow-[0_0_0_2px_hsl(var(--sidebar-border))] hover:bg-gray-300 hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
+        costum:"bg-background shadow-[0_0_0_2px_hsl(var(--sidebar-border))] hover:bg-gray-300 hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))] hover:border-black",
       },
       size: {
         default: "h-8 text-sm",
@@ -587,7 +587,7 @@ const SidebarMenuButton = React.forwardRef<
     },
     ref
   ) => {
-    const { isMobile, state } = useSidebar()
+    const { toggleSidebar,isMobile, state } = useSidebar()
 
     const button = (
       <button
@@ -596,6 +596,9 @@ const SidebarMenuButton = React.forwardRef<
         data-size={size}
         data-active={isActive}
         className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
+        onClick={()=>{
+          if(isMobile) toggleSidebar()
+        }}
         {...props}
       />
     )

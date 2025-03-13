@@ -93,7 +93,7 @@ const data_suppot: datasuppottype[] = [
   },
   {
     title: "ReactJS",
-    link: "https://v2.tailwindcss.com/",
+    link: "https://react.dev/",
     logo: (
       <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -120,7 +120,7 @@ const data_suppot: datasuppottype[] = [
   },
   {
     title: "Tailwind",
-    link: "https://v2.tailwindcss.com/",
+    link: "https://tailwindcss.com/",
     logo: (
       <svg
         fill="#000000"
@@ -134,6 +134,17 @@ const data_suppot: datasuppottype[] = [
           clip-rule="evenodd"
           d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
         />
+      </svg>
+    ),
+  },
+  {
+    title: "UI.Shadcn",
+    link: "https://ui.shadcn.com/",
+    logo: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+        <rect width="256" height="256" fill="none"></rect>
+        <line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></line>
+        <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></line>
       </svg>
     ),
   },
