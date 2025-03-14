@@ -23,7 +23,7 @@ export const data_experince: dataExperinceType[] = [
   {
     title: "Universitas Kristen Maranatha",
     periode: "Aug 2018 - Jul 2022",
-    location: "Bandung - Indonesia",
+    location: "Bandung, Indonesia",
     info: "Electrical Engineer S1",
     detail: [
       {
