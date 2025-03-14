@@ -1,9 +1,13 @@
+import { cn } from "@/lib/utils";
 import { HomePhoto } from "./photo";
 
+interface HomeProps{
+    cssBorder:string;
+}
 
-export default function Home() {
+export default function Home({cssBorder}:HomeProps) {
     return(
-        <div className="mt-16 mx-auto w-[88%] bg-[#ffffff1a] rounded-xl py-3 px-2">
+        <div className={cn(cssBorder,"")}>
             <HomePhoto />
         </div> 
     )
