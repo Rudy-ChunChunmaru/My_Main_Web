@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import logo_ukm from "@/assets/Logo-UKM.svg";
 
 import { ChevronsUpDown } from "lucide-react"
- 
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
 import {
   Collapsible,
@@ -97,7 +97,6 @@ const data_education = [
     },
 ]
 
-
 export function Education() {
     const [isOpen, setIsOpen] = useState([...data_education.map((value)=>{return({"id":value.id,"open":false})})])
     const extendOpen = (row:{
@@ -114,7 +113,6 @@ export function Education() {
         }[];
         logo: string;
         },rowIndex:number)=>{
-        console.log(!isOpen[rowIndex]["open"])
         setIsOpen(
             [...isOpen.map(
                 (value)=>{
@@ -127,7 +125,6 @@ export function Education() {
             ]
         )
     }
-    
 
     return(
         <Card>
@@ -135,25 +132,30 @@ export function Education() {
                 <CardTitle>Education</CardTitle>
                 <Separator className="bg-gray-500" />
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col gap-3">
                 {data_education.map((value,index)=>{
                     return(
-                        <div key={index} id={value.title} className="bg-zinc-100 rounded-sm py-1">
+                        <div key={index} id={value.title} className="bg-zinc-100 rounded-sm py-1 h-full transision-all duration-150">
                         <Collapsible
                             key={index}
                             open={isOpen[index]["open"]}
                             className="w-[100%] space-y-2"
                         >
                         <div className="flex items-center justify-between space-x-4 px-4">
-                          <div>
-                            <CardTitle>{value.title}</CardTitle>
-                            <Separator className="bg-gray-500" />
-                            <div className="flex gap-5 h-5 space-x-4 text-sm">
-                                <CardDescription>{value.info}</CardDescription>
-                                <Separator orientation="vertical" className="bg-gray-500" />
-                                <CardDescription>{value.periode}</CardDescription>
-                                <Separator orientation="vertical" className="bg-gray-500" />
-                                <CardDescription>{value.location}</CardDescription>
+                          <div className="flex gap-2">
+                            <div className="p-2 bg-white rounded-sm">
+                              <img src={value.logo} alt="logo" className="h-10 w-10" />
+                            </div>
+                            <div className="flex flex-col my-auto">
+                              <CardTitle>{value.title}</CardTitle>
+                              <Separator className="bg-gray-500" />
+                              <div className="flex gap-5 h-5 space-x-4 text-sm">
+                                  <CardDescription>{value.info}</CardDescription>
+                                  <Separator orientation="vertical" className="bg-gray-500" />
+                                  <CardDescription>{value.periode}</CardDescription>
+                                  <Separator orientation="vertical" className="bg-gray-500" />
+                                  <CardDescription>{value.location}</CardDescription>
+                              </div>
                             </div>
                           </div>
                           <CollapsibleTrigger asChild>
@@ -163,10 +165,27 @@ export function Education() {
                             </Button>
                           </CollapsibleTrigger>
                         </div>
-                        <CollapsibleContent className="space-y-2">
-                          <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
-                            @radix-ui/colors
-                          </div>
+                        <CollapsibleContent className="space-y-1">
+                          {value.detail.map((valuedetail,times)=>{
+                            return(
+                              <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                exit="hidden"
+                                viewport={{ once: true }}
+                                key={times}
+                                animate={!isOpen[index]["open"] ? "visible" : "hidden"}
+                                variants={{
+                                  hidden: { opacity: 0.25, y: -25 * times, transition: { duration: 0.3 } },
+                                  visible: { opacity: 1, y: 0 ,transition: { duration: 0.3 }},
+                                }}
+                                className="rounded-md border border-gray-500 px-2 py-1 font-mono text-sm shadow-sm"
+                              >
+                                {valuedetail.info}
+                              </motion.div>
+                            )
+                          })}
+                         
                         </CollapsibleContent>
                         </Collapsible>
                       </div>

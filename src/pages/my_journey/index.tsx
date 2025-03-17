@@ -2,6 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { Education } from "./education";
+import { Experiences } from "./experience";
+import { Certification } from "./certification";
 
 interface MyJourneyProps{
     cssBorder:string
@@ -15,8 +17,14 @@ export default function MyJourney({cssBorder}:MyJourneyProps) {
                     <CardTitle>My Journey</CardTitle>
                     <Separator className="bg-gray-500" />
                 </CardHeader>
-                <CardContent>
+                <CardContent key="Education">
                     <Education />
+                </CardContent>
+                <CardContent key="Experiences">
+                    <Experiences />
+                </CardContent>
+                <CardContent key="Certification">
+                    <Certification />
                 </CardContent>
             </Card>
         </div>
