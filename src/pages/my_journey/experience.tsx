@@ -19,7 +19,7 @@ const data_experince = [
         title: "PT PERDANA FRESTA GARMENT",
         periode: "Feb 2023 - Sep 2024",
         location: "Padalalarang - Indonesia",
-        info: "Full Stack Web Developer",
+        info: "IT Programer",
         detail: [
           {
             time: 2023,
@@ -99,9 +99,9 @@ const data_experince = [
       {
         id:2,
         title: "PT YKK AP INDONESIA",
-        periode: "Sep 2024",
+        periode: "Sep 2024 - Now",
         location: "Tangerang - Indonesia",
-        info: "IT System Analyst",
+        info: "Spesialis IT System and Data Analyst",
         detail: [
           {
             time: 2024,
