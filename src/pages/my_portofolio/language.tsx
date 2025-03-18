@@ -13,12 +13,12 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
-// const chartDataLanguage = [
-//     { title: "indonesia", spake: 10, readwrite:10, hear:10, fill: "var(--color-chrome)" },
-//     { title: "english", spake: 6, readwrite:5, hear:6, fill: "var(--color-safari)" },
-//     { title: "mandarin", spake: 5, readwrite:3, hear:4, fill: "var(--color-firefox)" },
-//     { title: "japanese", spake: 1, readwrite:0, hear:2, fill: "var(--color-edge)" },
-// ]
+const chartDataLanguage = [
+    { title: "indonesia", spake: 10, readwrite:10, hear:10, fill: "var(--color-chrome)" },
+    { title: "english", spake: 6, readwrite:5, hear:6, fill: "var(--color-safari)" },
+    { title: "mandarin", spake: 5, readwrite:3, hear:4, fill: "var(--color-firefox)" },
+    { title: "japanese", spake: 1, readwrite:0, hear:2, fill: "var(--color-edge)" },
+]
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -75,32 +75,83 @@ const chartConfig = {
 export function Language() {
   return (
     <Card className="flex flex-col">
-      <CardHeader className="items-center pb-0">
+      <CardHeader className="items-center">
         <CardTitle>Language</CardTitle>
-        <CardDescription>Counter</CardDescription>
       </CardHeader>
-      <CardContent className="flex-1 pb-0">
-        <ChartContainer
-          config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px] [&_.recharts-text]:fill-background"
-        >
-          <PieChart>
-            <ChartTooltip
-              content={<ChartTooltipContent nameKey="visitors" hideLabel />}
-            />
-            <Pie data={chartData} dataKey="visitors">
-              <LabelList
-                dataKey="browser"
-                className="fill-background"
-                stroke="none"
-                fontSize={12}
-                formatter={(value: keyof typeof chartConfig) =>
-                  chartConfig[value]?.label
-                }
+      <CardContent className="flex h-64 justify-between">
+        <div className="flex flex-col h-[100%] w-[100%] items-center ">
+          <CardDescription>Spake</CardDescription>
+          <ChartContainer
+            config={chartConfig}
+            className="mx-auto aspect-square h-[100%] max-h-[250px] [&_.recharts-text]:fill-background"
+          >
+            <PieChart>
+              <ChartTooltip
+                content={<ChartTooltipContent nameKey="spake" hideLabel />}
               />
-            </Pie>
-          </PieChart>
-        </ChartContainer>
+              <Pie data={chartDataLanguage} dataKey="spake">
+                <LabelList
+                  dataKey="title"
+                  className="fill-background"
+                  stroke="none"
+                  fontSize={12}
+                  formatter={(value: keyof typeof chartConfig) =>
+                    chartConfig[value]?.label
+                  }
+                />
+              </Pie>
+            </PieChart>
+          </ChartContainer>
+        </div>
+        <div className="flex flex-col h-[100%] w-[100%] items-center ">
+          <CardDescription>Read and Write</CardDescription>
+          <ChartContainer
+            config={chartConfig}
+            className="mx-auto aspect-square h-[100%] max-h-[250px] [&_.recharts-text]:fill-background"
+          >
+            <PieChart>
+              <ChartTooltip
+                content={<ChartTooltipContent nameKey="readwrite" hideLabel />}
+              />
+              <Pie data={chartDataLanguage} dataKey="readwrite">
+                <LabelList
+                  dataKey="title"
+                  className="fill-background"
+                  stroke="none"
+                  fontSize={12}
+                  formatter={(value: keyof typeof chartConfig) =>
+                    chartConfig[value]?.label
+                  }
+                />
+              </Pie>
+            </PieChart>
+          </ChartContainer>
+        </div>
+        <div className="flex flex-col h-[100%] w-[100%] items-center ">
+          <CardDescription>Hear</CardDescription>
+          <ChartContainer
+            config={chartConfig}
+            className="mx-auto aspect-square h-[100%] max-h-[250px] [&_.recharts-text]:fill-background"
+          >
+            <PieChart>
+              <ChartTooltip
+                content={<ChartTooltipContent nameKey="hear" hideLabel />}
+              />
+              <Pie data={chartDataLanguage} dataKey="hear">
+                <LabelList
+                  dataKey="title"
+                  className="fill-background"
+                  stroke="none"
+                  fontSize={12}
+                  formatter={(value: keyof typeof chartConfig) =>
+                    chartConfig[value]?.label
+                  }
+                />
+              </Pie>
+            </PieChart>
+          </ChartContainer>
+        </div>
+
       </CardContent>
     </Card>
   )
