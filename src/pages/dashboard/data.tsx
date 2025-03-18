@@ -1,4 +1,4 @@
-import {  Home, UserRound, Newspaper, Waves } from "lucide-react";
+import {  Home, UserRound, Newspaper, Waves, AudioLines } from "lucide-react";
 
 
 // Menu items.
@@ -10,18 +10,23 @@ export const menu_items = [
     },
     {
       title: "Profil",
-      url: "#profil",
+      url: "#MyProfile",
       icon: UserRound,
     },
     {
-      title: "Portofolio",
-      url: "#portofoilio",
+      title: "Journey",
+      url: "#MyJourney",
       icon: Newspaper,
     },
     {
-      title: "Media",
-      url: "#media",
+      title: "Portofolio",
+      url: "#MyPortofolio",
       icon: Waves,
+    },
+    {
+      title: "Media",
+      url: "#MyMedia",
+      icon: AudioLines,
     },
   ]
   

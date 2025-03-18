@@ -1,14 +1,15 @@
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Project } from "./project";
 import { Skill } from "./skill";
 import { Language } from "./language";
 
-interface MyProtofolioProps {
+interface MyPortofolioProps {
     cssBorder:string
 }
 
-export default function MyProtofolio({cssBorder}:MyProtofolioProps) {
+export default function MyPortofolio({cssBorder}:MyPortofolioProps) {
     return(
         <div className={cn(cssBorder,"")}>
             <Card className="shadow-xl">
@@ -17,7 +18,7 @@ export default function MyProtofolio({cssBorder}:MyProtofolioProps) {
                     <Separator className="bg-gray-500" />
                 </CardHeader>
                 <CardContent key="Project">
-
+                    <Project />
                 </CardContent>
                 <CardContent key="Skill">
                     <Skill />

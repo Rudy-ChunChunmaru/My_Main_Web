@@ -13,6 +13,8 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
+import { motion } from  "framer-motion";
+
 const ChartDataPrograming = [
     { title: "C++", programing: 6 },
     { title: "C", programing: 3 },
@@ -66,7 +68,16 @@ export function Skill() {
         <CardTitle>Skill</CardTitle>
       </CardHeader>
       <CardContent className="flex">
-        <div className="w-[95%] mx-auto">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          exit="hidden"
+          viewport={{ once: false }}           
+          variants={{
+            hidden: { opacity: 0, x: -25 , transition: { duration: 0.9 } },
+            visible: { opacity: 1, x: 0 ,transition: { duration: 0.9 }},
+          }}
+          className="w-[95%] mx-auto">
         <CardDescription>Programing</CardDescription>
         <ChartContainer  config={chartConfig}>
           <BarChart
@@ -115,8 +126,17 @@ export function Skill() {
             </Bar>
           </BarChart>
         </ChartContainer>
-        </div>
-        <div className="w-[95%] mx-auto">
+        </motion.div>
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          exit="hidden"
+          viewport={{ once: false }}           
+          variants={{
+            hidden: { opacity: 0, x: -25 , transition: { duration: 0.9 } },
+            visible: { opacity: 1, x: 0 ,transition: { duration: 0.9 }},
+          }}
+          className="w-[95%] mx-auto">
         <CardDescription>Framework</CardDescription>
         <ChartContainer  config={chartConfig}>
           <BarChart
@@ -165,7 +185,7 @@ export function Skill() {
             </Bar>
           </BarChart>
         </ChartContainer>
-        </div>
+        </motion.div>
       </CardContent>
     </Card>
   )

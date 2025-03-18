@@ -12,20 +12,15 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import { motion } from  "framer-motion";
 
 const chartDataLanguage = [
-    { title: "indonesia", spake: 10, readwrite:10, hear:10, fill: "var(--color-chrome)" },
-    { title: "english", spake: 6, readwrite:5, hear:6, fill: "var(--color-safari)" },
-    { title: "mandarin", spake: 5, readwrite:3, hear:4, fill: "var(--color-firefox)" },
-    { title: "japanese", spake: 1, readwrite:0, hear:2, fill: "var(--color-edge)" },
+    { title: "indonesia", spake: 10, readwrite:10, hear:10, fill: "var(--color-indonesia)" },
+    { title: "english", spake: 6, readwrite:5, hear:6, fill: "var(--color-english)" },
+    { title: "mandarin", spake: 5, readwrite:3, hear:4, fill: "var(--color-mandarin)" },
+    { title: "japanese", spake: 1, readwrite:0, hear:2, fill: "var(--color-japanese)" },
 ]
 
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-]
 const chartConfig = {
   indonesia: {
     label: "Indonesia",
@@ -43,9 +38,6 @@ const chartConfig = {
     label: "Japanese",
     color: "hsl(var(--chart-4))",
   },
-  visitors: {
-    label: "Visitors",
-  },
   spake: {
     label: "Spake",
   },
@@ -55,23 +47,8 @@ const chartConfig = {
   hear: {
     label: "Hear",
   },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
 } satisfies ChartConfig
+
 export function Language() {
   return (
     <Card className="flex flex-col">
@@ -79,7 +56,16 @@ export function Language() {
         <CardTitle>Language</CardTitle>
       </CardHeader>
       <CardContent className="flex h-64 justify-between">
-        <div className="flex flex-col h-[100%] w-[100%] items-center ">
+        <motion.div
+         initial="hidden"
+         whileInView="visible"
+         exit="hidden"
+         viewport={{ once: false }}           
+         variants={{
+          hidden: { opacity: 0, x: -25 , transition: { duration: 0.9 } },
+          visible: { opacity: 1, x: 0 ,transition: { duration: 0.9 }},
+          }}
+         className="flex flex-col h-[100%] w-[100%] items-center ">
           <CardDescription>Spake</CardDescription>
           <ChartContainer
             config={chartConfig}
@@ -102,8 +88,17 @@ export function Language() {
               </Pie>
             </PieChart>
           </ChartContainer>
-        </div>
-        <div className="flex flex-col h-[100%] w-[100%] items-center ">
+        </motion.div>
+        <motion.div
+                 initial="hidden"
+                 whileInView="visible"
+                 exit="hidden"
+                 viewport={{ once: false }}           
+                 variants={{
+                  hidden: { opacity: 0, x: -25 , transition: { duration: 0.9 } },
+                  visible: { opacity: 1, x: 0 ,transition: { duration: 0.9 }},
+                  }}
+        className="flex flex-col h-[100%] w-[100%] items-center ">
           <CardDescription>Read and Write</CardDescription>
           <ChartContainer
             config={chartConfig}
@@ -126,8 +121,17 @@ export function Language() {
               </Pie>
             </PieChart>
           </ChartContainer>
-        </div>
-        <div className="flex flex-col h-[100%] w-[100%] items-center ">
+        </motion.div>
+        <motion.div
+         initial="hidden"
+         whileInView="visible"
+         exit="hidden"
+         viewport={{ once: false }}           
+         variants={{
+          hidden: { opacity: 0, x: -25 , transition: { duration: 0.9 } },
+          visible: { opacity: 1, x: 0 ,transition: { duration: 0.9 }},
+          }}
+        className="flex flex-col h-[100%] w-[100%] items-center ">
           <CardDescription>Hear</CardDescription>
           <ChartContainer
             config={chartConfig}
@@ -150,8 +154,7 @@ export function Language() {
               </Pie>
             </PieChart>
           </ChartContainer>
-        </div>
-
+        </motion.div>
       </CardContent>
     </Card>
   )
