@@ -10,17 +10,17 @@ export function IndexPage() {
 
     return(
         <Dashboard>
-            <div id="home" className="flex flex-col gap-5 h-full w-full pt-10 pb-5">
-                <div id="MyProfile" className="h-full w-full">
+            <div key={1} id="home" className="flex flex-col gap-5 h-fit w-full pt-10 pb-5">
+                <div id="MyProfile">
                     <MyProfile cssBorder={cssBorder} />
                 </div>
-                <div id="MyJourney" className="h-full w-full">
+                <div id="MyJourney">
                     <MyJourney cssBorder={cssBorder} />
                 </div>
-                <div id="MyPortofolio" className="h-full w-full">
+                <div id="MyPortofolio">
                     <MyPortofolio cssBorder={cssBorder} />
                 </div>
-                <div id="MyMedia" className="h-full w-full">
+                <div id="MyMedia">
                     <MyMedia cssBorder={cssBorder} />
                 </div>
             </div>

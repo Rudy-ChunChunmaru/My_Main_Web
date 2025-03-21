@@ -67,7 +67,7 @@ export function Skill() {
       <CardHeader>
         <CardTitle>Skill</CardTitle>
       </CardHeader>
-      <CardContent className="flex">
+      <CardContent className="flex flex-col md:flex-row">
         <motion.div 
           initial="hidden"
           whileInView="visible"

@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/com
 import { Separator } from "@/components/ui/separator";
 import logo_ukm from "@/assets/Logo-UKM.svg";
 
-import { ChevronsUpDown } from "lucide-react"
+import { ChevronsUpDown, CircleStop, Clock12, MapPin } from "lucide-react"
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
 import {
@@ -143,26 +143,23 @@ export function Education() {
                         >
                         <div className="flex items-center justify-between space-x-4 px-4">
                           <div className="flex gap-2">
-                            <div className="p-2 bg-white rounded-sm">
+                            <div className="p-2 bg-white rounded-sm h-fit">
                               <img src={value.logo} alt="logo" className="h-10 w-10" />
                             </div>
                             <div className="flex flex-col my-auto">
                               <CardTitle>{value.title}</CardTitle>
                               <Separator className="bg-gray-500" />
-                              <div className="flex gap-5 h-5 space-x-4 text-sm">
-                                  <CardDescription>{value.info}</CardDescription>
-                                  <Separator orientation="vertical" className="bg-gray-500" />
-                                  <CardDescription>{value.periode}</CardDescription>
-                                  <Separator orientation="vertical" className="bg-gray-500" />
-                                  <CardDescription>{value.location}</CardDescription>
+                              <div className="flex flex-col md:flex-row gap-1 md:gap-5 h-fix md:space-x-4 text-sm">
+                                  <CardDescription className="flex gap-2"><CircleStop /><span className="my-auto">{value.info}</span></CardDescription>
+                                  <CardDescription className="flex gap-2"><Clock12 /><span className="my-auto">{value.periode}</span></CardDescription>
+                                  <CardDescription className="flex gap-2"><MapPin/><span className="my-auto">{value.location}</span></CardDescription>
                               </div>
                             </div>
                           </div>
                           <CollapsibleTrigger asChild>
-                            <Button variant="outline" size="sm" onClick={()=>{extendOpen(value,index)}}>
-                              <ChevronsUpDown className="h-4 w-4" />
-                              <span className="sr-only">Toggle</span>
-                            </Button>
+                              <Button variant="outline" size="icon" onClick={()=>{extendOpen(value,index)}}>
+                                <ChevronsUpDown className="h-4 w-4" />
+                              </Button>
                           </CollapsibleTrigger>
                         </div>
                         <CollapsibleContent className="space-y-1">

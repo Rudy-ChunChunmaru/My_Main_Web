@@ -55,7 +55,7 @@ export function Language() {
       <CardHeader className="items-center">
         <CardTitle>Language</CardTitle>
       </CardHeader>
-      <CardContent className="flex h-64 justify-between">
+      <CardContent className="flex flex-col md:flex-row h-[42rem] md:h-64 justify-between">
         <motion.div
          initial="hidden"
          whileInView="visible"
@@ -65,7 +65,7 @@ export function Language() {
           hidden: { opacity: 0, x: -25 , transition: { duration: 0.9 } },
           visible: { opacity: 1, x: 0 ,transition: { duration: 0.9 }},
           }}
-         className="flex flex-col h-[100%] w-[100%] items-center ">
+         className="flex flex-col  h-[100%] w-[100%] items-center ">
           <CardDescription>Spake</CardDescription>
           <ChartContainer
             config={chartConfig}

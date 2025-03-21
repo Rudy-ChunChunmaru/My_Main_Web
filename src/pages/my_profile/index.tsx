@@ -1,5 +1,6 @@
+import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { HomePhoto } from "./photo";
+
 
 interface MyProfileProps{
     cssBorder:string;
@@ -8,7 +9,9 @@ interface MyProfileProps{
 export default function MyProfile({cssBorder}:MyProfileProps) {
     return(
         <div className={cn(cssBorder,"")}>
-            <HomePhoto />
+            <Card>
+                
+            </Card>
         </div> 
     )
 }

@@ -72,12 +72,12 @@ export function MediaContent() {
                 <CommandGroup heading="Curriculum Vitae">
                     {data_cv.map((value,index)=>{
                         return(
-                            <CommandItem key={index}>
-                                <Button variant={"ghost"} className="w-[100%] justify-start" onClick={()=>window.open(value.link,"_blank")}>
+                       
+                                <Button key={index} variant={"ghost"} className="w-[100%] justify-start hover:bg-gray-300" onClick={()=>window.open(value.link,"_blank")}>
                                     <File />
                                     <strong>{value.title}</strong>
                                 </Button>
-                            </CommandItem>
+               
                         )
                     })}
                 </CommandGroup>
@@ -85,12 +85,11 @@ export function MediaContent() {
                 <CommandGroup heading="Media Sosial">
                     {data_media.map((value,index)=>{
                         return(
-                            <CommandItem key={index}>
-                                <Button variant={"ghost"} className="w-[100%] justify-start" onClick={()=>window.open(value.link,"_blank")}>
+
+                                <Button key={index} variant={"ghost"} className="w-[100%] justify-start hover:bg-gray-300" onClick={()=>window.open(value.link,"_blank")}>
                                     {value.logo}
                                     <strong>{value.title}</strong>
                                 </Button>
-                            </CommandItem>
                         )
                     })}
                 </CommandGroup>
