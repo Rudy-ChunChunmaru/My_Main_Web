@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 
@@ -10,7 +10,9 @@ export default function MyProfile({cssBorder}:MyProfileProps) {
     return(
         <div className={cn(cssBorder,"")}>
             <Card>
-                
+                <CardHeader>
+                    
+                </CardHeader>
             </Card>
         </div> 
     )
