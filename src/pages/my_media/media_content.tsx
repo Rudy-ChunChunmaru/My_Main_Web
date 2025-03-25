@@ -1,6 +1,6 @@
 import { File } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Command, CommandList , CommandSeparator ,CommandGroup, CommandItem } from "@/components/ui/command";
+import { Command, CommandList , CommandSeparator ,CommandGroup } from "@/components/ui/command";
 
 const data_media = [
     {

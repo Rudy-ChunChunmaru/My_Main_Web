@@ -37,7 +37,7 @@ export function Project() {
                         {dataProject.map((value,index)=>{
                             return(
                             <CarouselItem key={`kapsule-${index}`} className="flex flex-col md:flex-row gap-5 md:gap-10 justify-start" >
-                                <Card key={`kapsuleCard-${index}`} className="w-[100%] md:w-[60%] h-full shadow-lg">
+                                <Card key={`kapsuleCard-${index}`} className="w-[100%] md:w-[50%] h-full shadow-lg">
                                     <CardHeader key={`kapsuleCardHeader-${index}`}>
                                         <CardTitle>{value.title}</CardTitle>
                                     </CardHeader>
