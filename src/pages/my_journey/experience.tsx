@@ -158,7 +158,7 @@ export function Experiences() {
                                 open={isOpen[index]["open"]}
                                 className="w-[100%] space-y-2"
                             >
-                            <div className="flex items-center justify-between space-x-4 px-4">
+                            <div className="flex items-center justify-between space-x-4 px-1 md:px-2 xl:px-4">
                             <div className="flex gap-2">
                                 <div className="p-2 bg-white rounded-sm h-fit">
                                   <img src={value.logo} alt="logo" className="h-10 w-10" />
@@ -166,10 +166,19 @@ export function Experiences() {
                                 <div className="flex flex-col my-auto">
                                 <CardTitle>{value.title}</CardTitle>
                                 <Separator className="bg-gray-500" />
-                                  <div className="flex flex-col md:flex-row gap-1 md:gap-5 h-fix md:space-x-4 text-sm">
-                                    <CardDescription className="flex gap-2"><CircleStop /><span className="my-auto">{value.info}</span></CardDescription>
-                                    <CardDescription className="flex gap-2"><Clock12 /><span className="my-auto">{value.periode}</span></CardDescription>
-                                    <CardDescription className="flex gap-2"><MapPin/><span className="my-auto">{value.location}</span></CardDescription>
+                                  <div className="flex flex-col md:flex-row gap-0 md:gap-5 h-fix md:space-x-4 ">
+                                  <CardDescription className="flex gap-2">
+                                    <CircleStop className="w-4"/>
+                                    <span className="my-auto">{value.info}</span>
+                                  </CardDescription>
+                                  <CardDescription className="flex gap-2">
+                                    <Clock12 className="w-4" />
+                                    <span className="my-auto">{value.periode}</span>
+                                  </CardDescription>
+                                  <CardDescription className="flex gap-2">
+                                    <MapPin className="w-4" />
+                                    <span className="my-auto">{value.location}</span>
+                                  </CardDescription>
                                   </div>
                                 </div>
                             </div>

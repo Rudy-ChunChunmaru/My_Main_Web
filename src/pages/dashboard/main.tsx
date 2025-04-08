@@ -38,7 +38,7 @@ export function Main({children}:MainProps){
                 initial="visible"
                 animate={controls}
                 exit="hidden"
-                className="fixed flex w-full bg-[#ffffff4a] px-2 py-1 gap-3 drop-shadow-xl"
+                className="fixed flex w-full bg-[#ffffff4a] px-2 py-1 gap-3 drop-shadow-xl justify-end sm:justify-start"
             >
                 <div className="border-2 rounded-lg border-black bg-gray-500">
                     <SidebarTrigger />
