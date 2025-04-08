@@ -202,13 +202,16 @@ export function Experiences() {
                                   hidden: { opacity: 0.25, y: -25 * times, transition: { duration: 0.3 } },
                                   visible: { opacity: 1, y: 0 ,transition: { duration: 0.3 }},
                                 }}
-                                className="rounded-md border border-gray-500 px-2 py-1 font-mono text-sm shadow-sm"
+                                className="rounded-md border border-gray-500 p-1 font-mono shadow-sm"
                               >
+                                <div className="flex justify-between p-1">
+                                  <span>{valuedetail.doing}</span>
+                                  <strong>{valuedetail.time}</strong>
+                                </div>
                                 {valuedetail.info}
                               </motion.div>
                             )
                           })}
-                         
                         </CollapsibleContent>
                         </Collapsible>
                         </div>
