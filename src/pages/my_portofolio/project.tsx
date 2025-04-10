@@ -60,15 +60,11 @@ export function Project() {
                                         {value.photodetail.map((valuePhoto,indexPhoto)=>{
                                             return(
                                                 <CarouselItem key={`kapsuleCardkapuselphotodetail-${indexPhoto}`} className=" h-full">
-                                                    <Card className="w-[100%] shadow-lg">
-                                                        <CardContent className="w-[100%]">
-                                                            <img
-                                                                className="my-auto w-[100%]"
-                                                                src={valuePhoto}
-                                                                alt={`portofolio_image_` + valuePhoto}
-                                                            />
-                                                        </CardContent>
-                                                    </Card>
+                                                    <img
+                                                        className="my-auto w-[100%]"
+                                                        src={valuePhoto}
+                                                        alt={`portofolio_image_` + valuePhoto}
+                                                    />
                                                 </CarouselItem>
                                             )
                                         })}
