@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/collapsible"
 
 const data_experince = [
-    {   
+      {   
         id:1,
         title: "PT PERDANA FRESTA GARMENT",
         periode: "Feb 2023 - Sep 2024",
@@ -99,7 +99,7 @@ const data_experince = [
       {
         id:2,
         title: "PT YKK AP INDONESIA",
-        periode: "Sep 2024 - Now",
+        periode: "Sep 2024 - Sep 2025",
         location: "Tangerang - Indonesia",
         info: "Spesialis IT System and Data Analyst",
         detail: [
@@ -109,8 +109,54 @@ const data_experince = [
             info: "Analyst data database build of material item and data injection data",
             link: "",
           },
+          {
+            time: 2025,
+            doing: "Project",
+            info: "Build Data Warehouse and doing ETL Proses using Python",
+            link: "",
+          },
+          {
+            time: 2025,
+            doing: "Project",
+            info: "Build WorkFlow System and Auto Email System",
+            link: "",
+          },
+          {
+            time: 2025,
+            doing: "Project",
+            info: "Build Data Warehouse and doing ETL Proses using airflow",
+            link: "",
+          },
+          {
+            time: 2025,
+            doing: "Project",
+            info: "Project Management System Development",
+            link: "",
+          },
+          {
+            time: 2025,
+            doing: "Project",
+            info: "Making System Dashboard using Superset",
+            link: "",
+          },
         ],
         logo: logo_ykkap,
+      },
+      {
+        id:3,
+        title: "-",
+        periode: "Sep 2025 - Life Time",
+        location: "KalBar - Indonesia",
+        info: "Founder & CEO",
+        detail: [
+          {
+            time: 2025,
+            doing: "Enterperner",
+            info: "-",
+            link: "",
+          },
+        ],
+        logo: "",
       },
 ]
 
@@ -161,7 +207,7 @@ export function Experiences() {
                             <div className="flex items-center justify-between space-x-4 px-1 md:px-2 xl:px-4">
                             <div className="flex gap-2">
                                 <div className="p-2 bg-white rounded-sm h-fit">
-                                  <img src={value.logo} alt="logo" className="h-10 w-10" />
+                                  { value.logo ? <img src={value.logo} alt="logo" className="h-10 w-10" /> : <></> }
                                 </div>
                                 <div className="flex flex-col my-auto">
                                 <CardTitle>{value.title}</CardTitle>

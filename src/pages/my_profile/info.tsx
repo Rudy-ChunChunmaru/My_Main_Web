@@ -3,15 +3,14 @@ import Typewriter from "typewriter-effect";
 export function Info(){
     const wordarray: Array<string> = [
         "Programer",
-        "IT Develoment",
+        "Developer",
+        "Data Analyst",
         "Electrical Engineer",
-        "Web Developer Backend",
-        "Web Developer Frontend",
       ];
     
     return (
         <h1>
-          I am
+          Who am I ?
           <Typewriter
             options={{
               strings: wordarray,

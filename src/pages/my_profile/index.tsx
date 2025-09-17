@@ -22,7 +22,7 @@ export default function MyProfile({cssBorder}:MyProfileProps) {
                     </div>
                     <div className="z-10 flex h-full w-full flex-col gap-2 md:w-5/12">
                         <motion.div
-                        className="text-center font-Protest_Revolution text-2xl xl:text-[3.9rem]"
+                        className="text-center font-Protest_Revolution text-4xl xl:text-[3.9rem]"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false }}
@@ -32,7 +32,7 @@ export default function MyProfile({cssBorder}:MyProfileProps) {
                             visible: { opacity: 1, y: 0 },
                         }}
                         >
-                            <h1>I AM RUDY</h1>
+                            <strong>RUDY S.T</strong>
                         </motion.div>
                         <motion.div
                             className="text-center font-Protest_Riot text-3xl xl:text-[3.2rem]"
