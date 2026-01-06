@@ -1,13 +1,19 @@
 import ProfilePhoto from "@/assets/profile.jpg";
-import { useEffect, useState } from "react";
-// loading
+import { useEffect, useState, CSSProperties  } from "react";
+
 import RiseLoader from "react-spinners/RiseLoader";
 
+
+
 export function Profile(){
-    const [image, setImage] = useState<any>();
+    const [image, setImage] = useState<any>(undefined);
 
     useEffect(() => {
-      import("@/assets/profile.jpg").then(setImage);
+
+      setTimeout(() => {
+        import("@/assets/profile.jpg").then(setImage);
+      }, 500);
+
     });
   
     if (image != undefined) {
@@ -23,8 +29,8 @@ export function Profile(){
       );
     }
     return (
-      <div className="group relative mx-auto w-48 l:w-60 xxl:w-64">
-        <RiseLoader color="hsla(180, 3%, 19%, 1)" speedMultiplier={1} />
+      <div className="group relative mx-auto my-20 w-auto">
+        <RiseLoader color="white" speedMultiplier={1} />
       </div>
     );
 }
