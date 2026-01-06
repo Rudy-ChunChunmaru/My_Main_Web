@@ -141,23 +141,7 @@ const data_experince = [
           },
         ],
         logo: logo_ykkap,
-      },
-      {
-        id:3,
-        title: "-",
-        periode: "Sep 2025 - Life Time",
-        location: "KalBar - Indonesia",
-        info: "Founder & CEO",
-        detail: [
-          {
-            time: 2025,
-            doing: "Enterperner",
-            info: "-",
-            link: "",
-          },
-        ],
-        logo: "",
-      },
+      }
 ]
 
 export function Experiences() {

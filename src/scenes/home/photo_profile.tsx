@@ -1,4 +1,4 @@
-import Profile from "@/assets/profile.png";
+import Profile from "@/assets/profile.jpg";
 import { useEffect, useState } from "react";
 // loading
 import RiseLoader from "react-spinners/RiseLoader";
@@ -7,7 +7,7 @@ const PhotoProfile = () => {
   const [image, setImage] = useState<any>();
 
   useEffect(() => {
-    import("@/assets/profile.png").then(setImage);
+    import("@/assets/profile.jpg").then(setImage);
   });
 
   if (image != undefined) {
