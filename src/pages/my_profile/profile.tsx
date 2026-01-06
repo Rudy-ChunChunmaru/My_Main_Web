@@ -1,5 +1,5 @@
 import ProfilePhoto from "@/assets/profile.jpg";
-import { useEffect, useState, CSSProperties  } from "react";
+import { useEffect, useState} from "react";
 
 import RiseLoader from "react-spinners/RiseLoader";
 
