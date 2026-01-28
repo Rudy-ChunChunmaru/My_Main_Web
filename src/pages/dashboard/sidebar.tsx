@@ -17,7 +17,7 @@ import {
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { menu_items,data_suppot } from "@/pages/dashboard/data";
+import { menu_items, data_games, data_suppot } from "@/pages/dashboard/data";
 
 
 
@@ -57,6 +57,47 @@ export function DashboardSidebar() {
                         </motion.div>
                   </SidebarMenuItem>
                   </AnchorLink>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+      <SidebarContent>
+        <SidebarGroup key={"Section Game"}>
+          <SidebarGroupLabel className="text-base text-back flex-col flex">
+            <strong>Games Made by me</strong>
+            <Separator className="bg-gray-500" />
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {data_games.map((item,index) => (
+               
+                <SidebarMenuItem key={item.title} >
+                  <motion.div
+                    key={item.title}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.5 + (index * 0.1) }}
+                    variants={{
+                      hidden: { opacity: 1, x: (-150 - (index * 15)) },
+                      visible: { opacity: 1, x: 0 },
+                    }}
+                  >
+                    <SidebarMenuButton 
+                      variant={"costum"} 
+                      className="flex items-center gap-2" key={index}
+                      onClick={(e)=>{
+                        e.preventDefault();
+                        window.open(item.url, "_blank");
+                      }}
+                    >
+                      <item.icon />
+                      <span>{item.title}</span>   
+                    </SidebarMenuButton>
+                  </motion.div>
+
+                </SidebarMenuItem>
+       
               ))}
             </SidebarMenu>
           </SidebarGroupContent>

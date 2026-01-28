@@ -1,4 +1,4 @@
-import {  Home, UserRound, Newspaper, Waves, AudioLines } from "lucide-react";
+import {  Home, UserRound, Newspaper, Waves, AudioLines, Gamepad2 } from "lucide-react";
 
 
 // Menu items.
@@ -27,6 +27,15 @@ export const menu_items = [
       title: "Media",
       url: "#MyMedia",
       icon: AudioLines,
+    },
+
+  ]
+
+  export const data_games = [
+    {
+      title: "Flappy Bird",
+      url: "https://rudy-chunchunmaru.github.io/Game_FlappyBird/",
+      icon: Gamepad2,
     },
   ]
   
