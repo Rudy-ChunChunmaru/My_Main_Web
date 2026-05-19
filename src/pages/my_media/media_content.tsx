@@ -21,7 +21,7 @@ const data_media = [
     },
     {
       title: "Github",
-      link: "https://github.com/Rudy-ChunChunmaru",
+      link: "https://github.com/rudymu1998",
       logo: (
         <svg
           xmlns="http://www.w3.org/2000/svg"

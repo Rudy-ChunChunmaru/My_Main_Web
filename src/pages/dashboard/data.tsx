@@ -34,7 +34,7 @@ export const menu_items = [
   export const data_games = [
     {
       title: "Flappy Bird",
-      url: "https://rudy-chunchunmaru.github.io/Game_FlappyBird/",
+      url: "https://rudymu1998.github.io/Game_FlappyBird/",
       icon: Gamepad2,
     },
   ]
